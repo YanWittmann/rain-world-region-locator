@@ -59,7 +59,7 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
                     key=lambda x: x[1],
                     reverse=True
                 )[:subregion_limit]
-                top_subregion_names = [subregion if subregion else 'Unknown' for subregion, count in top_subregions]
+                top_subregion_names = [subregion if subregion else 'none' for subregion, count in top_subregions]
                 summaries.append({
                     'start_time': format_timedelta(start_time),
                     'end_time': format_timedelta(end_time),
@@ -115,7 +115,7 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
         top_room_names = [room for room, count in top_rooms]
         top_filenames = [', '.join(filename_map[room]) for room in top_room_names]
         top_subregions = sorted(subregion_counts.items(), key=lambda x: x[1], reverse=True)[:subregion_limit]
-        top_subregion_names = [subregion if subregion else 'Unknown' for subregion, count in top_subregions]
+        top_subregion_names = [subregion if subregion else 'none' for subregion, count in top_subregions]
         summaries.append({
             'start_time': format_timedelta(start_time),
             'end_time': format_timedelta(end_time),

@@ -21,6 +21,12 @@ def format_timedelta(td):
     return f"{hours}:{minutes:02}:{seconds:02}"
 
 
+def extract_region_from_filename(filename):
+    # check if it starts with 'gate_XX_' and if so, ignore the prefix and only use what comes after
+    if filename.startswith('gate_'):
+        return filename.split('_')[2]
+    return filename.split('_')[0]
+
 def summarize_locations(events, interval_minutes=5, subregion_limit=10):
     """Summarize player's predominant location and rooms for each interval."""
     summaries = []
@@ -49,7 +55,8 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
                 top_rooms = sorted(room_counts.items(), key=lambda x: x[1], reverse=True)[:4]
                 top_room_names = [room for room, count in top_rooms]
                 top_filenames = [
-                    {'name': filename, 'path': f"./{predominant_slugcat}/{filename.split('_')[0]}/{filename}"} # get the area from the filename of format "oe_s04_0.png", "sl_b04_2.png" --> "oe", "sl"
+                    {'name': filename, 'path': f"./{predominant_slugcat}/{extract_region_from_filename(filename)}/{filename}"}
+                    # get the area from the filename of format "oe_s04_0.png", "sl_b04_2.png" --> "oe", "sl"
                     for room in top_room_names
                     for filename in filename_map[room]
                 ]
@@ -58,7 +65,7 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
                     key=lambda x: x[1],
                     reverse=True
                 )[:subregion_limit]
-                top_subregion_names = [subregion if subregion else 'Unknown' for subregion, count in top_subregions]
+                top_subregion_names = [subregion if subregion else 'none' for subregion, count in top_subregions]
                 summaries.append({
                     'start_time': format_timedelta(start_time),
                     'end_time': format_timedelta(end_time),
@@ -113,7 +120,7 @@ def generate_markdown(summaries, video_file, output_file):
 
         f.write("\n## Details\n\n")
         f.write(
-            "| Time              | Slugcat              | Region            | Subregion   | Most frequent rooms                     | Room images       |\n")
+            "| Time              | Slugcat              | Region            | Subregion   | Most frequent rooms                     | Rooms       |\n")
         f.write(
             "|-------------------|----------------------|-------------------|-------------|-----------------------------------------|-------------------|\n")
 
@@ -171,7 +178,46 @@ def generate_html(summaries, video_file, output_file):
                 color: #3498db;
                 text-decoration: none;
             }}
+            .preview img {{
+                max-width: 100px;
+                max-height: 100px;
+                margin-right: 5px;
+            }}
+            .preview {{
+                white-space: nowrap;
+            }}
+            .preview.large img {{
+                max-width: 175px;
+                max-height: 175px;
+            }}
+            .preview.xlarge img {{
+                max-width: 250px;
+                max-height: 250px;
+            }}
+            button {{
+                padding: 3px 10px;
+                background-color: #3498db;
+                border-radius: 5px;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }}
         </style>
+        <script>
+            function togglePreviewSize() {{
+                const previews = document.querySelectorAll('.preview');
+                previews.forEach(preview => {{
+                    if (preview.classList.contains('large')) {{
+                        preview.classList.remove('large');
+                        preview.classList.add('xlarge');
+                    }} else if (preview.classList.contains('xlarge')) {{
+                        preview.classList.remove('xlarge');
+                    }} else {{
+                        preview.classList.add('large');
+                    }}
+                }});
+            }}
+        </script>
     </head>
     <body>
         <div class="container">
@@ -198,7 +244,8 @@ def generate_html(summaries, video_file, output_file):
                         <th>Region</th>
                         <th>Subregion</th>
                         <th>Most Frequent Rooms</th>
-                        <th>Room Images</th>
+                        <th>Preview <button style="margin-left:5px" onclick="togglePreviewSize()">Resize</button></th>
+                        <th>Rooms</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -207,6 +254,9 @@ def generate_html(summaries, video_file, output_file):
         html_filenames = ', '.join(
             [f"<a href='{filename['path']}'>{filename['name']}</a>" for filename in summary['filenames']]
         )
+        preview_images = ''.join(
+            f"<img src='{filename['path']}' alt='{filename['name']}'>" for filename in summary['filenames'][:3]
+        )
         html_content += f"""
                     <tr>
                         <td>{summary['start_time']}</td>
@@ -214,6 +264,7 @@ def generate_html(summaries, video_file, output_file):
                         <td><a href="{summary['slugcat']}/{summary['region']}">{summary['region']}</a></td>
                         <td>{summary['subregions']}</td>
                         <td>{summary['rooms']}</td>
+                        <td class="preview">{preview_images}</td>
                         <td>{html_filenames}</td>
                     </tr>
         """
@@ -225,7 +276,6 @@ def generate_html(summaries, video_file, output_file):
     </html>
     """
 
-    # Write the HTML content to the file
     with open(output_file.replace('.md', '.html'), 'w') as f:
         f.write(html_content)
     print(f"HTML file saved to {output_file.replace('.md', '.html')}")
@@ -244,7 +294,8 @@ def main():
     if args.output_file == '<json_filename>':
         args.output_file = os.path.splitext(args.json_file)[0] + ('.md' if args.format == 'md' else '.html')
     # append correct filename if not provided
-    if (not args.output_file.endswith('.md') and args.format == 'md') or (not args.output_file.endswith('.html') and args.format == 'html'):
+    if (not args.output_file.endswith('.md') and args.format == 'md') or (
+            not args.output_file.endswith('.html') and args.format == 'html'):
         args.output_file += '.md' if args.format == 'md' else '.html'
 
     with open(args.json_file, 'r') as f:
