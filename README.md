@@ -11,6 +11,13 @@ I created this project to simplify my work when working on my
 series, where it can be really useful to have a list of all the rooms and areas visited by the player
 and to automatically generate timestamps to import into my project files.
 
+Examples for the output:
+
+- Analysis results of a video file:
+    - [CSV](doc/Gourmand%20-%20Rain%20World%20Blind%20%2332%20%5BWOU3KgRc13g%5D-converted.csv)
+    - [HTML](doc/Gourmand%20-%20Rain%20World%20Blind%20%2332%20%5BWOU3KgRc13g%5D-converted.html)
+    - [Markdown](doc/Gourmand%20-%20Rain%20World%20Blind%20%2332%20%5BWOU3KgRc13g%5D-converted.md)
+
 ## How to run this project
 
 ### Setup
@@ -27,22 +34,22 @@ Preparation:
 
 1. [Rain World Screenshots](#rain-world-screenshots):
    Create the screenshots of the game you want to analyze.
-2. [extract_hashes.py](#extract_hashespy):  
+2. [extract_hashes.py](#extract_hashespy):
    Run this script once to generate the hashes for the images you want to analyze.
 
 Only one image:
 
-1. [match_image_hash.py](#match_image_hashpy)  
+1. [match_image_hash.py](#match_image_hashpy):
    Run this script to match a single image against the hashes and see the result.
    You can adapt this script to your needs.
 
 For a video:
 
-1. [process_video.py](#process_videopy)  
+1. [process_video.py](#process_videopy):
    This will process an entire video and save the results in a JSON file.
-2. [interpret_overview_table.py](#interpret_overview_tablepy)  
+2. [interpret_overview_table.py](#interpret_overview_tablepy):
    This will convert the JSON file into a Markdown or HTML file, with aggregated data over time intervals.
-3. [interpret_csv.py](#interpret_csvpy)  
+3. [interpret_csv.py](#interpret_csvpy):
    Same as above, but in CSV format.
 
 I will use https://www.youtube.com/watch?v=WOU3KgRc13g&list=PL68V5Cxs_CvTOxamvSacuCQ8mruxnnQ7X&index=33 as an example.
