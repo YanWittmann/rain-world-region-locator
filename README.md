@@ -257,3 +257,12 @@ start_time,end_time,slugcat,area,rooms,filenames,subregions
 0:54:34,0:59:34,gourmand,sl,"OE_RUIN10, SL_I01, SL_ROOF04, SL_AI","oe_ruin10_1.png; sl_i01_3.png; sl_roof04_3.png, sl_roof04_2.png; sl_ai_0.png","Looks to the Moon, Outer Expanse"
 0:59:34,1:04:34,gourmand,oe,"OE_RUIN08, OE_RUIN10, SL_C06, SL_ECNIUS02",oe_ruin08_0.png; oe_ruin10_1.png; sl_c06_2.png; sl_ecnius02_0.png,"Outer Expanse, Shoreline"
 ```
+
+## Quick-Reference
+
+Perform on video:
+
+```bash
+python process_video.py "<path_to_video>" "<path_to_screenshots>" --search_filter "<slugcat_or_region_filter>"
+python interpret_overview_table.py "<path_to_json>" --format html --output_file "<output_file_name>"
+```
