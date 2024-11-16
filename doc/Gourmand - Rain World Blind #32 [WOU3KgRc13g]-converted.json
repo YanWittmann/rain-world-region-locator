@@ -1,0 +1,3122 @@
+[
+    {
+        "timestamp": "0:19:34",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_s04_0.png",
+        "room_key": "OE_S04",
+        "distance": 7,
+        "room_metadata": {
+            "name": "OE_S04",
+            "subregion": null,
+            "pos": [
+                791.874,
+                337.186
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ]
+            ],
+            "size": [
+                48,
+                35
+            ],
+            "spawns": [],
+            "tags": [
+                "SHELTER"
+            ],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:19:44",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_s04_0.png",
+        "room_key": "OE_S04",
+        "distance": 9,
+        "room_metadata": {
+            "name": "OE_S04",
+            "subregion": null,
+            "pos": [
+                791.874,
+                337.186
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ]
+            ],
+            "size": [
+                48,
+                35
+            ],
+            "spawns": [],
+            "tags": [
+                "SHELTER"
+            ],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:19:54",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_b04_2.png",
+        "room_key": "SL_B04",
+        "distance": 13,
+        "room_metadata": {
+            "name": "SL_B04",
+            "subregion": "Shoreline",
+            "pos": [
+                51.541,
+                4.01
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    1650.0
+                ],
+                [
+                    -220.0,
+                    893.0
+                ],
+                [
+                    -220.0,
+                    132.0
+                ]
+            ],
+            "size": [
+                48,
+                121
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "WhiteLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 2
+                    }
+                ],
+                [
+                    {
+                        "type": "",
+                        "count": 1,
+                        "chance": 0.05,
+                        "night": false,
+                        "data": null,
+                        "den": 3
+                    },
+                    {
+                        "type": "WhiteLizard",
+                        "count": 1,
+                        "chance": 0.2,
+                        "night": false,
+                        "data": null,
+                        "den": 3
+                    },
+                    {
+                        "type": "RedLizard",
+                        "count": 1,
+                        "chance": 0.0,
+                        "night": false,
+                        "data": null,
+                        "den": 3
+                    }
+                ]
+            ],
+            "tags": [
+                "SWARMROOM"
+            ],
+            "objects": [
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        424.186,
+                        2029.074
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "SL_chimney",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        410.877,
+                        2231.408
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "BroadcastMisc",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:55:44",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_i01_3.png",
+        "room_key": "SL_I01",
+        "distance": 6,
+        "room_metadata": {
+            "name": "SL_I01",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                923.042,
+                -31.49
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    1650.0
+                ],
+                [
+                    806.0,
+                    1660.0
+                ],
+                [
+                    1827.0,
+                    1660.0
+                ],
+                [
+                    -215.0,
+                    891.0
+                ],
+                [
+                    803.0,
+                    891.0
+                ],
+                [
+                    1827.0,
+                    891.0
+                ],
+                [
+                    -215.0,
+                    125.0
+                ],
+                [
+                    806.0,
+                    121.0
+                ],
+                [
+                    1827.0,
+                    125.0
+                ]
+            ],
+            "size": [
+                152,
+                121
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "UniqueDataPearl",
+                    "pos": [
+                        2550.05,
+                        2104.999
+                    ],
+                    "data": [
+                        "37",
+                        "172",
+                        "0",
+                        "0",
+                        "SL_moon",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1992.303,
+                        1909.807
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1944.148,
+                        2086.115
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        935.772,
+                        1903.801
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1563.125,
+                        1450.656
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2215.602,
+                        1095.828
+                    ],
+                    "data": [
+                        "-353",
+                        "320",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2200.827,
+                        1101.65
+                    ],
+                    "data": [
+                        "-321",
+                        "412",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2180.167,
+                        1100.068
+                    ],
+                    "data": [
+                        "-330",
+                        "232",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2048.33,
+                        1099.433
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2024.981,
+                        1094.449
+                    ],
+                    "data": [
+                        "-165",
+                        "142",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1147.196,
+                        477.459
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1844.907,
+                        483.374
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        835.126,
+                        486.594
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        2414.678,
+                        478.687
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "RedToken",
+                    "pos": [
+                        2531.757,
+                        701.55
+                    ],
+                    "data": [
+                        "1",
+                        "-72",
+                        "-381",
+                        "-40",
+                        "0",
+                        "SL",
+                        "",
+                        "0",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:55:54",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_ai_0.png",
+        "room_key": "SL_AI",
+        "distance": 9,
+        "room_metadata": {
+            "name": "SL_AI",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                1149.535,
+                -18.585
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -192.0,
+                    -77.0
+                ],
+                [
+                    830.0,
+                    -78.0
+                ]
+            ],
+            "size": [
+                98,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:56:04",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_ai_0.png",
+        "room_key": "SL_AI",
+        "distance": 9,
+        "room_metadata": {
+            "name": "SL_AI",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                1149.535,
+                -18.585
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -192.0,
+                    -77.0
+                ],
+                [
+                    830.0,
+                    -78.0
+                ]
+            ],
+            "size": [
+                98,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:56:14",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_i01_3.png",
+        "room_key": "SL_I01",
+        "distance": 5,
+        "room_metadata": {
+            "name": "SL_I01",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                923.042,
+                -31.49
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    1650.0
+                ],
+                [
+                    806.0,
+                    1660.0
+                ],
+                [
+                    1827.0,
+                    1660.0
+                ],
+                [
+                    -215.0,
+                    891.0
+                ],
+                [
+                    803.0,
+                    891.0
+                ],
+                [
+                    1827.0,
+                    891.0
+                ],
+                [
+                    -215.0,
+                    125.0
+                ],
+                [
+                    806.0,
+                    121.0
+                ],
+                [
+                    1827.0,
+                    125.0
+                ]
+            ],
+            "size": [
+                152,
+                121
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "UniqueDataPearl",
+                    "pos": [
+                        2550.05,
+                        2104.999
+                    ],
+                    "data": [
+                        "37",
+                        "172",
+                        "0",
+                        "0",
+                        "SL_moon",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1992.303,
+                        1909.807
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1944.148,
+                        2086.115
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        935.772,
+                        1903.801
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1563.125,
+                        1450.656
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2215.602,
+                        1095.828
+                    ],
+                    "data": [
+                        "-353",
+                        "320",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2200.827,
+                        1101.65
+                    ],
+                    "data": [
+                        "-321",
+                        "412",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2180.167,
+                        1100.068
+                    ],
+                    "data": [
+                        "-330",
+                        "232",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2048.33,
+                        1099.433
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2024.981,
+                        1094.449
+                    ],
+                    "data": [
+                        "-165",
+                        "142",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1147.196,
+                        477.459
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1844.907,
+                        483.374
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        835.126,
+                        486.594
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        2414.678,
+                        478.687
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "RedToken",
+                    "pos": [
+                        2531.757,
+                        701.55
+                    ],
+                    "data": [
+                        "1",
+                        "-72",
+                        "-381",
+                        "-40",
+                        "0",
+                        "SL",
+                        "",
+                        "0",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:56:24",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_roof04_2.png",
+        "room_key": "SL_ROOF04",
+        "distance": 5,
+        "room_metadata": {
+            "name": "SL_ROOF04",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                1198.358,
+                165.659
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -250.0,
+                    2211.0
+                ],
+                [
+                    -234.0,
+                    1479.0
+                ],
+                [
+                    -227.0,
+                    739.0
+                ],
+                [
+                    -216.0,
+                    -5.0
+                ]
+            ],
+            "size": [
+                48,
+                149
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "DevToken",
+                    "pos": [
+                        437.602,
+                        2477.821
+                    ],
+                    "data": [
+                        "-78",
+                        "46",
+                        "-402",
+                        "237",
+                        "0",
+                        "",
+                        "",
+                        "0",
+                        "0",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:56:34",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin10_1.png",
+        "room_key": "OE_RUIN10",
+        "distance": 7,
+        "room_metadata": {
+            "name": "OE_RUIN10",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -84.466,
+                44.921
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -181.0,
+                    -61.0
+                ],
+                [
+                    801.0,
+                    -59.0
+                ]
+            ],
+            "size": [
+                101,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 8
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:56:44",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_roof04_3.png",
+        "room_key": "SL_ROOF04",
+        "distance": 8,
+        "room_metadata": {
+            "name": "SL_ROOF04",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                1198.358,
+                165.659
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -250.0,
+                    2211.0
+                ],
+                [
+                    -234.0,
+                    1479.0
+                ],
+                [
+                    -227.0,
+                    739.0
+                ],
+                [
+                    -216.0,
+                    -5.0
+                ]
+            ],
+            "size": [
+                48,
+                149
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "DevToken",
+                    "pos": [
+                        437.602,
+                        2477.821
+                    ],
+                    "data": [
+                        "-78",
+                        "46",
+                        "-402",
+                        "237",
+                        "0",
+                        "",
+                        "",
+                        "0",
+                        "0",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:56:54",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_i01_3.png",
+        "room_key": "SL_I01",
+        "distance": 6,
+        "room_metadata": {
+            "name": "SL_I01",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                923.042,
+                -31.49
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    1650.0
+                ],
+                [
+                    806.0,
+                    1660.0
+                ],
+                [
+                    1827.0,
+                    1660.0
+                ],
+                [
+                    -215.0,
+                    891.0
+                ],
+                [
+                    803.0,
+                    891.0
+                ],
+                [
+                    1827.0,
+                    891.0
+                ],
+                [
+                    -215.0,
+                    125.0
+                ],
+                [
+                    806.0,
+                    121.0
+                ],
+                [
+                    1827.0,
+                    125.0
+                ]
+            ],
+            "size": [
+                152,
+                121
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "UniqueDataPearl",
+                    "pos": [
+                        2550.05,
+                        2104.999
+                    ],
+                    "data": [
+                        "37",
+                        "172",
+                        "0",
+                        "0",
+                        "SL_moon",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1992.303,
+                        1909.807
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1944.148,
+                        2086.115
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        935.772,
+                        1903.801
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1563.125,
+                        1450.656
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2215.602,
+                        1095.828
+                    ],
+                    "data": [
+                        "-353",
+                        "320",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2200.827,
+                        1101.65
+                    ],
+                    "data": [
+                        "-321",
+                        "412",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2180.167,
+                        1100.068
+                    ],
+                    "data": [
+                        "-330",
+                        "232",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2048.33,
+                        1099.433
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2024.981,
+                        1094.449
+                    ],
+                    "data": [
+                        "-165",
+                        "142",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1147.196,
+                        477.459
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1844.907,
+                        483.374
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        835.126,
+                        486.594
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        2414.678,
+                        478.687
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "RedToken",
+                    "pos": [
+                        2531.757,
+                        701.55
+                    ],
+                    "data": [
+                        "1",
+                        "-72",
+                        "-381",
+                        "-40",
+                        "0",
+                        "SL",
+                        "",
+                        "0",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:57:04",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_cave07_0.png",
+        "room_key": "OE_CAVE07",
+        "distance": 4,
+        "room_metadata": {
+            "name": "OE_CAVE07",
+            "subregion": null,
+            "pos": [
+                -1246.797,
+                -21.171
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -218.0,
+                    745.0
+                ],
+                [
+                    -218.0,
+                    -1.0
+                ],
+                [
+                    743.0,
+                    -1.0
+                ],
+                [
+                    1707.0,
+                    -1.0
+                ]
+            ],
+            "size": [
+                152,
+                78
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:57:14",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin10_1.png",
+        "room_key": "OE_RUIN10",
+        "distance": 10,
+        "room_metadata": {
+            "name": "OE_RUIN10",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -84.466,
+                44.921
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -181.0,
+                    -61.0
+                ],
+                [
+                    801.0,
+                    -59.0
+                ]
+            ],
+            "size": [
+                101,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 8
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:57:24",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin10_1.png",
+        "room_key": "OE_RUIN10",
+        "distance": 9,
+        "room_metadata": {
+            "name": "OE_RUIN10",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -84.466,
+                44.921
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -181.0,
+                    -61.0
+                ],
+                [
+                    801.0,
+                    -59.0
+                ]
+            ],
+            "size": [
+                101,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 8
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:57:34",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_c01_2.png",
+        "room_key": "SL_C01",
+        "distance": 7,
+        "room_metadata": {
+            "name": "SL_C01",
+            "subregion": "Shoreline",
+            "pos": [
+                -99.959,
+                372.51
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -219.0,
+                    1663.0
+                ],
+                [
+                    -217.0,
+                    901.0
+                ],
+                [
+                    -219.0,
+                    138.0
+                ]
+            ],
+            "size": [
+                48,
+                121
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "UniqueDataPearl",
+                    "pos": [
+                        863.358,
+                        2029.891
+                    ],
+                    "data": [
+                        "-52",
+                        "285.9672",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        895.166,
+                        2026.932
+                    ],
+                    "data": [
+                        "23",
+                        "157",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        766.887,
+                        2029.896
+                    ],
+                    "data": [
+                        "29",
+                        "-136",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "KarmaFlower",
+                    "pos": [
+                        797.729,
+                        2053.052
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "5",
+                        "7"
+                    ]
+                },
+                {
+                    "type": "BlueToken",
+                    "pos": [
+                        170.55,
+                        2078.762
+                    ],
+                    "data": [
+                        "-8",
+                        "-56",
+                        "0",
+                        "0",
+                        "1",
+                        "JellyFish",
+                        "Artificer|Spear",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:57:44",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_i01_3.png",
+        "room_key": "SL_I01",
+        "distance": 6,
+        "room_metadata": {
+            "name": "SL_I01",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                923.042,
+                -31.49
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    1650.0
+                ],
+                [
+                    806.0,
+                    1660.0
+                ],
+                [
+                    1827.0,
+                    1660.0
+                ],
+                [
+                    -215.0,
+                    891.0
+                ],
+                [
+                    803.0,
+                    891.0
+                ],
+                [
+                    1827.0,
+                    891.0
+                ],
+                [
+                    -215.0,
+                    125.0
+                ],
+                [
+                    806.0,
+                    121.0
+                ],
+                [
+                    1827.0,
+                    125.0
+                ]
+            ],
+            "size": [
+                152,
+                121
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "UniqueDataPearl",
+                    "pos": [
+                        2550.05,
+                        2104.999
+                    ],
+                    "data": [
+                        "37",
+                        "172",
+                        "0",
+                        "0",
+                        "SL_moon",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1992.303,
+                        1909.807
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1944.148,
+                        2086.115
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        935.772,
+                        1903.801
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "DataPearl",
+                    "pos": [
+                        1563.125,
+                        1450.656
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "Misc",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2215.602,
+                        1095.828
+                    ],
+                    "data": [
+                        "-353",
+                        "320",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2200.827,
+                        1101.65
+                    ],
+                    "data": [
+                        "-321",
+                        "412",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2180.167,
+                        1100.068
+                    ],
+                    "data": [
+                        "-330",
+                        "232",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2048.33,
+                        1099.433
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2024.981,
+                        1094.449
+                    ],
+                    "data": [
+                        "-165",
+                        "142",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1147.196,
+                        477.459
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        1844.907,
+                        483.374
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        835.126,
+                        486.594
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "JellyFish",
+                    "pos": [
+                        2414.678,
+                        478.687
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "RedToken",
+                    "pos": [
+                        2531.757,
+                        701.55
+                    ],
+                    "data": [
+                        "1",
+                        "-72",
+                        "-381",
+                        "-40",
+                        "0",
+                        "SL",
+                        "",
+                        "0",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:57:54",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_roof04_2.png",
+        "room_key": "SL_ROOF04",
+        "distance": 4,
+        "room_metadata": {
+            "name": "SL_ROOF04",
+            "subregion": "Looks to the Moon",
+            "pos": [
+                1198.358,
+                165.659
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -250.0,
+                    2211.0
+                ],
+                [
+                    -234.0,
+                    1479.0
+                ],
+                [
+                    -227.0,
+                    739.0
+                ],
+                [
+                    -216.0,
+                    -5.0
+                ]
+            ],
+            "size": [
+                48,
+                149
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "DevToken",
+                    "pos": [
+                        437.602,
+                        2477.821
+                    ],
+                    "data": [
+                        "-78",
+                        "46",
+                        "-402",
+                        "237",
+                        "0",
+                        "",
+                        "",
+                        "0",
+                        "0",
+                        "0",
+                        "1",
+                        "0",
+                        "0",
+                        "0",
+                        "1"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:58:04",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin10_1.png",
+        "room_key": "OE_RUIN10",
+        "distance": 8,
+        "room_metadata": {
+            "name": "OE_RUIN10",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -84.466,
+                44.921
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -181.0,
+                    -61.0
+                ],
+                [
+                    801.0,
+                    -59.0
+                ]
+            ],
+            "size": [
+                101,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 8
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:58:14",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin10_1.png",
+        "room_key": "OE_RUIN10",
+        "distance": 9,
+        "room_metadata": {
+            "name": "OE_RUIN10",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -84.466,
+                44.921
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -181.0,
+                    -61.0
+                ],
+                [
+                    801.0,
+                    -59.0
+                ]
+            ],
+            "size": [
+                101,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 8
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:58:24",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_cave12_2.png",
+        "room_key": "OE_CAVE12",
+        "distance": 14,
+        "room_metadata": {
+            "name": "OE_CAVE12",
+            "subregion": "Journey's End",
+            "pos": [
+                -1488.784,
+                18.954
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    342.0,
+                    3026.0
+                ],
+                [
+                    203.0,
+                    2401.0
+                ],
+                [
+                    609.0,
+                    1693.0
+                ],
+                [
+                    106.0,
+                    974.0
+                ],
+                [
+                    888.0,
+                    365.0
+                ],
+                [
+                    -89.0,
+                    89.0
+                ]
+            ],
+            "size": [
+                106,
+                192
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "Centipede",
+                        "count": 3,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 10
+                    }
+                ],
+                [
+                    {
+                        "type": "SmallCentipede",
+                        "count": 5,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 11
+                    }
+                ],
+                [
+                    {
+                        "type": "TentaclePlant",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Night}",
+                        "den": 7
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "GooieDuck",
+                    "pos": [
+                        654.691,
+                        1527.386
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "GooieDuck",
+                    "pos": [
+                        688.597,
+                        1546.404
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:58:34",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_s05x_0.png",
+        "room_key": "OE_S05x",
+        "distance": 10,
+        "room_metadata": {
+            "name": "OE_S05x",
+            "subregion": null,
+            "pos": [
+                -714.213,
+                79.766
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ]
+            ],
+            "size": [
+                48,
+                35
+            ],
+            "spawns": [],
+            "tags": [
+                "ANCIENTSHELTER"
+            ],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:58:44",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_a06_0.png",
+        "room_key": "SL_A06",
+        "distance": 12,
+        "room_metadata": {
+            "name": "SL_A06",
+            "subregion": "Shoreline",
+            "pos": [
+                -628.459,
+                -473.99
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ]
+            ],
+            "size": [
+                48,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        347.055,
+                        374.956
+                    ],
+                    "data": [
+                        "-519",
+                        "137",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        616.377,
+                        379.092
+                    ],
+                    "data": [
+                        "-565",
+                        "36.99997",
+                        "1",
+                        "5"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        368.678,
+                        391.437
+                    ],
+                    "data": [
+                        "-547",
+                        "-91",
+                        "2",
+                        "5"
+                    ]
+                },
+                {
+                    "type": "GoldToken",
+                    "pos": [
+                        425.2,
+                        456.487
+                    ],
+                    "data": [
+                        "9",
+                        "-63",
+                        "-196",
+                        "-358",
+                        "0",
+                        "SL",
+                        "Artificer|Spear",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ]
+                },
+                {
+                    "type": "BlueToken",
+                    "pos": [
+                        489.069,
+                        444.916
+                    ],
+                    "data": [
+                        "-10",
+                        "-63",
+                        "7",
+                        "-343",
+                        "1",
+                        "SeaLeech",
+                        "Artificer|Spear",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0",
+                        "0"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "0:58:54",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_cave11_2.png",
+        "room_key": "OE_CAVE11",
+        "distance": 11,
+        "room_metadata": {
+            "name": "OE_CAVE11",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -962.945,
+                -120.402
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ],
+                [
+                    1535.0,
+                    -64.0
+                ],
+                [
+                    651.0,
+                    -60.0
+                ]
+            ],
+            "size": [
+                136,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:59:04",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_cave11_2.png",
+        "room_key": "OE_CAVE11",
+        "distance": 12,
+        "room_metadata": {
+            "name": "OE_CAVE11",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -962.945,
+                -120.402
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ],
+                [
+                    1535.0,
+                    -64.0
+                ],
+                [
+                    651.0,
+                    -60.0
+                ]
+            ],
+            "size": [
+                136,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:59:14",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_pump01_1.png",
+        "room_key": "OE_PUMP01",
+        "distance": 10,
+        "room_metadata": {
+            "name": "OE_PUMP01",
+            "subregion": "Facility Roots (Western Intake)",
+            "pos": [
+                1349.821,
+                -379.67
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ],
+                [
+                    771.0,
+                    -61.0
+                ],
+                [
+                    1767.0,
+                    -61.0
+                ],
+                [
+                    2763.0,
+                    -61.0
+                ],
+                [
+                    3759.0,
+                    -61.0
+                ]
+            ],
+            "size": [
+                246,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:59:24",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_a17_0.png",
+        "room_key": "SL_A17",
+        "distance": 12,
+        "room_metadata": {
+            "name": "SL_A17",
+            "subregion": "Shoreline",
+            "pos": [
+                4.794,
+                348.24
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ]
+            ],
+            "size": [
+                48,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:59:34",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin10_1.png",
+        "room_key": "OE_RUIN10",
+        "distance": 11,
+        "room_metadata": {
+            "name": "OE_RUIN10",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -84.466,
+                44.921
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -181.0,
+                    -61.0
+                ],
+                [
+                    801.0,
+                    -59.0
+                ]
+            ],
+            "size": [
+                101,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 8
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:59:44",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_c06_2.png",
+        "room_key": "SL_C06",
+        "distance": 9,
+        "room_metadata": {
+            "name": "SL_C06",
+            "subregion": "Shoreline",
+            "pos": [
+                -556.459,
+                -475.49
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ],
+                [
+                    804.0,
+                    -61.0
+                ],
+                [
+                    1828.0,
+                    -58.0
+                ]
+            ],
+            "size": [
+                162,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "JetFish",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 3
+                    }
+                ],
+                [
+                    {
+                        "type": "JetFish",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 4
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "0:59:54",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_ecnius02_0.png",
+        "room_key": "SL_ECNIUS02",
+        "distance": 13,
+        "room_metadata": {
+            "name": "SL_ECNIUS02",
+            "subregion": "Shoreline",
+            "pos": [
+                -72.049,
+                -174.925
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ]
+            ],
+            "size": [
+                48,
+                35
+            ],
+            "spawns": [],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        236.037,
+                        534.553
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        197.957,
+                        562.945
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        212.857,
+                        536.89
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "1:00:04",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin08_0.png",
+        "room_key": "OE_RUIN08",
+        "distance": 10,
+        "room_metadata": {
+            "name": "OE_RUIN08",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -542.192,
+                167.011
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -191.0,
+                    -61.0
+                ],
+                [
+                    807.0,
+                    -61.0
+                ],
+                [
+                    1808.0,
+                    -61.0
+                ]
+            ],
+            "size": [
+                151,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 5
+                    }
+                ],
+                [
+                    {
+                        "type": "Yeek",
+                        "count": 7,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 7
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    },
+    {
+        "timestamp": "1:00:14",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin09_0.png",
+        "room_key": "OE_RUIN09",
+        "distance": 15,
+        "room_metadata": {
+            "name": "OE_RUIN09",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -289.349,
+                120.372
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -221.0,
+                    812.0
+                ],
+                [
+                    -220.0,
+                    82.0
+                ]
+            ],
+            "size": [
+                48,
+                78
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "PinkLizard",
+                        "count": 2,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 3
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "FlyLure",
+                    "pos": [
+                        355.7,
+                        1214.739
+                    ],
+                    "data": [
+                        "-241",
+                        "-363",
+                        "4",
+                        "9"
+                    ]
+                },
+                {
+                    "type": "FlyLure",
+                    "pos": [
+                        403.681,
+                        1213.835
+                    ],
+                    "data": [
+                        "147",
+                        "-323",
+                        "4",
+                        "9"
+                    ]
+                },
+                {
+                    "type": "FlyLure",
+                    "pos": [
+                        534.374,
+                        1213.906
+                    ],
+                    "data": [
+                        "8",
+                        "-120",
+                        "4",
+                        "9"
+                    ]
+                },
+                {
+                    "type": "GooieDuck",
+                    "pos": [
+                        400.551,
+                        1403.807
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "GooieDuck",
+                    "pos": [
+                        473.605,
+                        1363.83
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "1:00:24",
+        "slugcat": "gourmand",
+        "region": "sl",
+        "filename": "sl_e02_0.png",
+        "room_key": "SL_E02",
+        "distance": 17,
+        "room_metadata": {
+            "name": "SL_E02",
+            "subregion": "Shoreline",
+            "pos": [
+                122.541,
+                -228.491
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -220.0,
+                    -70.0
+                ],
+                [
+                    803.0,
+                    -60.0
+                ],
+                [
+                    1814.0,
+                    -64.0
+                ],
+                [
+                    2827.0,
+                    -60.0
+                ],
+                [
+                    3835.0,
+                    -61.0
+                ]
+            ],
+            "size": [
+                258,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "JetFish",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "JetFish",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 5
+                    }
+                ],
+                [
+                    {
+                        "type": "SeaLeech",
+                        "count": 7,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 6
+                    }
+                ],
+                [
+                    {
+                        "type": "SeaLeech",
+                        "count": 7,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 7
+                    }
+                ],
+                [
+                    {
+                        "type": "SeaLeech",
+                        "count": 7,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": null,
+                        "den": 8
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": [
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        4553.111,
+                        497.106
+                    ],
+                    "data": [
+                        "-584",
+                        "39",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        4604.87,
+                        443.402
+                    ],
+                    "data": [
+                        "-658",
+                        "1.000031",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        4480.404,
+                        514.378
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2732.3,
+                        605.012
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2701.764,
+                        613.551
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "WaterNut",
+                    "pos": [
+                        2675.079,
+                        609.566
+                    ],
+                    "data": [
+                        "0",
+                        "0",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        834.578,
+                        592.184
+                    ],
+                    "data": [
+                        "-940",
+                        "-47",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        752.138,
+                        536.895
+                    ],
+                    "data": [
+                        "-872",
+                        "-152",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        591.897,
+                        574.864
+                    ],
+                    "data": [
+                        "-696",
+                        "-299",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "DangleFruit",
+                    "pos": [
+                        563.143,
+                        503.581
+                    ],
+                    "data": [
+                        "-394",
+                        "-397",
+                        "2",
+                        "3"
+                    ]
+                },
+                {
+                    "type": "Hazer",
+                    "pos": [
+                        2534.436,
+                        600.073
+                    ],
+                    "data": [
+                        "-67",
+                        "-97",
+                        "7",
+                        "10"
+                    ]
+                },
+                {
+                    "type": "Hazer",
+                    "pos": [
+                        2451.398,
+                        598.865
+                    ],
+                    "data": [
+                        "-414",
+                        "-71",
+                        "7",
+                        "10"
+                    ]
+                }
+            ]
+        }
+    },
+    {
+        "timestamp": "1:00:34",
+        "slugcat": "gourmand",
+        "region": "oe",
+        "filename": "oe_ruin08_0.png",
+        "room_key": "OE_RUIN08",
+        "distance": 12,
+        "room_metadata": {
+            "name": "OE_RUIN08",
+            "subregion": "Outer Expanse",
+            "pos": [
+                -542.192,
+                167.011
+            ],
+            "hidden": false,
+            "offscreenDen": false,
+            "cameras": [
+                [
+                    -191.0,
+                    -61.0
+                ],
+                [
+                    807.0,
+                    -61.0
+                ],
+                [
+                    1808.0,
+                    -61.0
+                ]
+            ],
+            "size": [
+                151,
+                35
+            ],
+            "spawns": [
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 4
+                    }
+                ],
+                [
+                    {
+                        "type": "SpitLizard",
+                        "count": 1,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 5
+                    }
+                ],
+                [
+                    {
+                        "type": "Yeek",
+                        "count": 7,
+                        "chance": -1.0,
+                        "night": false,
+                        "data": "{Ignorecycle}",
+                        "den": 7
+                    }
+                ]
+            ],
+            "tags": [],
+            "objects": []
+        }
+    }
+]

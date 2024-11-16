@@ -1,0 +1,37 @@
+start_time,end_time,slugcat,area,rooms,filenames,subregions
+0:19:34,0:24:34,gourmand,oe,"OE_RAIL03, SI_B07x, OE_S04, OE_SPIRE","oe_rail03_0.png, oe_rail03_1.png; si_b07x_0.png, si_b07x_1.png; oe_s04_0.png; oe_spire_1.png",Sunken Pier
+0:24:34,0:29:34,gourmand,oe,"OE_RAIL03, OE_RAIL02, OE_S04, SI_S05","oe_rail03_4.png, oe_rail03_0.png, oe_rail03_2.png, oe_rail03_1.png; oe_rail02_3.png; oe_s04_0.png; si_s05_0.png","Sunken Pier, Unknown"
+0:29:34,0:34:34,gourmand,oe,"OE_RAIL01, OE_RAIL03, OE_CAVE03, OE_S04","oe_rail01_1.png, oe_rail01_0.png, oe_rail01_4.png, oe_rail01_2.png, oe_rail01_3.png, oe_rail01_5.png; oe_rail03_3.png, oe_rail03_0.png, oe_rail03_5.png, oe_rail03_1.png, oe_rail03_2.png; oe_cave03_4.png; oe_s04_0.png",Sunken Pier
+0:34:34,0:39:34,gourmand,oe,"OE_RAIL01, OE_RAIL05, OE_CAVE04, OE_RUIN17","oe_rail01_10.png, oe_rail01_4.png, oe_rail01_5.png; oe_rail05_1.png, oe_rail05_0.png; oe_cave04_1.png; oe_ruin17_1.png","Unknown, Sunken Pier, Outer Expanse"
+0:39:34,0:44:34,gourmand,oe,"OE_TOWER14, GATE_SB_OE, OE_RAIL06, OE_CAVE15","oe_tower14_1.png; gate_sb_oe_0.png; oe_rail06_4.png, oe_rail06_1.png; oe_cave15_1.png, oe_cave15_0.png",Unknown
+0:44:34,0:49:34,gourmand,oe,"OE_CAVE04, OE_RUIN08, OE_RUIN10, OE_TOWER14","oe_cave04_1.png; oe_ruin08_0.png; oe_ruin10_1.png, oe_ruin10_0.png; oe_tower14_1.png","Outer Expanse, Unknown"
+0:49:34,0:54:34,gourmand,oe,"OE_CAVE04, SL_AI, OE_RUIN09, OE_RUIN10",oe_cave04_1.png; sl_ai_0.png; oe_ruin09_1.png; oe_ruin10_1.png,"Outer Expanse, Shoreline, Looks to the Moon"
+0:54:34,0:59:34,gourmand,sl,"SL_AI, SL_I01, OE_RUIN10, SL_ROOF04","sl_ai_0.png; sl_i01_3.png; oe_ruin10_1.png; sl_roof04_2.png, sl_roof04_3.png","Looks to the Moon, Outer Expanse"
+0:59:34,1:04:34,gourmand,oe,"SL_E02, OE_RUIN10, OE_S05x, OE_RUIN08","sl_e02_0.png; oe_ruin10_1.png, oe_ruin10_0.png; oe_s05x_0.png; oe_ruin08_0.png","Outer Expanse, Shoreline, Unknown"
+1:04:34,1:09:34,gourmand,sl,"SL_TUNNELA, SL_D02, SI_S04, OE_CAVE13","sl_tunnela_4.png, sl_tunnela_2.png, sl_tunnela_0.png, sl_tunnela_1.png, sl_tunnela_3.png; sl_d02_2.png; si_s04_0.png; oe_cave13_1.png","Unknown, Shoreline"
+1:09:34,1:14:34,gourmand,sl,"SL_C04, SL_D01, SL_TUNNELA, GATE_SI_LF","sl_c04_0.png; sl_d01_0.png, sl_d01_3.png; sl_tunnela_4.png, sl_tunnela_2.png, sl_tunnela_3.png, sl_tunnela_0.png; gate_si_lf_0.png","Shoreline, Unknown"
+1:14:34,1:19:34,gourmand,sl,"SL_C04, SL_D01, OE_CAVE17, SL_C05","sl_c04_2.png, sl_c04_0.png; sl_d01_3.png, sl_d01_0.png; oe_cave17_0.png; sl_c05_2.png","Shoreline, Unknown, Outer Expanse"
+1:19:34,1:24:34,gourmand,sl,"SL_C03, SL_A03, SL_D01, SL_D03","sl_c03_1.png, sl_c03_0.png, sl_c03_2.png; sl_a03_0.png; sl_d01_3.png, sl_d01_0.png; sl_d03_0.png","Shoreline, Unknown"
+1:24:34,1:29:34,gourmand,sl,"SL_D04, SL_F02, SL_H02, SL_A12","sl_d04_1.png, sl_d04_0.png; sl_f02_2.png; sl_h02_0.png, sl_h02_6.png, sl_h02_2.png, sl_h02_1.png; sl_a12_0.png",Shoreline
+1:29:34,1:34:34,gourmand,sl,"SL_I01, SL_F01, SL_H03, SL_C09","sl_i01_7.png, sl_i01_3.png, sl_i01_6.png; sl_f01_1.png; sl_h03_7.png, sl_h03_4.png, sl_h03_2.png; sl_c09_2.png, sl_c09_1.png","Looks to the Moon, Shoreline"
+1:34:34,1:39:34,gourmand,sl,"SL_AI, SL_I01, SL_A07, SI_S05","sl_ai_0.png, sl_ai_1.png; sl_i01_0.png, sl_i01_1.png, sl_i01_4.png, sl_i01_5.png, sl_i01_6.png, sl_i01_3.png; sl_a07_0.png; si_s05_0.png",Looks to the Moon
+1:39:34,1:44:34,gourmand,sl,SL_AI,sl_ai_1.png,Looks to the Moon
+1:44:34,1:49:34,gourmand,sl,"SL_AI, OE_RUIN19",sl_ai_1.png; oe_ruin19_4.png,Looks to the Moon
+1:49:34,1:54:34,gourmand,sl,SL_AI,sl_ai_1.png,Looks to the Moon
+1:54:34,1:59:34,gourmand,sl,SL_AI,"sl_ai_0.png, sl_ai_1.png",Looks to the Moon
+1:59:34,2:04:34,gourmand,sl,"SL_I01, SL_AI, SI_S05, OE_RAIL02","sl_i01_4.png, sl_i01_7.png, sl_i01_5.png, sl_i01_6.png, sl_i01_8.png, sl_i01_3.png; sl_ai_0.png, sl_ai_1.png; si_s05_0.png; oe_rail02_3.png","Looks to the Moon, Unknown"
+2:04:34,2:09:34,gourmand,sl,"SL_H03, SL_C09, SI_S05, SL_C07","sl_h03_2.png, sl_h03_4.png, sl_h03_3.png, sl_h03_7.png; sl_c09_2.png, sl_c09_0.png, sl_c09_1.png; si_s05_0.png; sl_c07_2.png","Shoreline, Unknown, Looks to the Moon"
+2:09:34,2:14:34,gourmand,sl,"SL_E02, SI_S05, OE_RUIN11, SL_ECNIUS02","sl_e02_0.png, sl_e02_4.png, sl_e02_3.png, sl_e02_2.png; si_s05_0.png; oe_ruin11_1.png; sl_ecnius02_0.png","Shoreline, Unknown"
+2:14:34,2:19:34,gourmand,sl,"SL_E02, SL_H03, SL_C07, SL_ECNIUS02","sl_e02_3.png, sl_e02_4.png, sl_e02_2.png, sl_e02_0.png; sl_h03_2.png; sl_c07_2.png; sl_ecnius02_0.png","Shoreline, Unknown, Outer Expanse"
+2:19:34,2:24:34,gourmand,sl,"SL_E02, SL_ECNIUS02, SL_A05, SI_S05","sl_e02_0.png, sl_e02_4.png, sl_e02_3.png, sl_e02_2.png; sl_ecnius02_0.png; sl_a05_0.png; si_s05_0.png",Shoreline
+2:24:34,2:29:34,gourmand,sl,"SL_H03, SL_C07, SL_C04, SL_E02","sl_h03_2.png; sl_c07_2.png; sl_c04_0.png; sl_e02_3.png, sl_e02_4.png","Shoreline, Unknown"
+2:29:34,2:34:34,gourmand,sl,"SL_E02, SL_E03, OE_PUMP01, SL_H03","sl_e02_0.png, sl_e02_4.png, sl_e02_3.png, sl_e02_2.png; sl_e03_1.png, sl_e03_2.png, sl_e03_3.png, sl_e03_4.png; oe_pump01_0.png; sl_h03_2.png",Shoreline
+2:34:34,2:39:34,gourmand,sl,"SL_E02, SL_E03, SI_S05, SL_H03","sl_e02_4.png, sl_e02_3.png; sl_e03_0.png, sl_e03_1.png, sl_e03_2.png, sl_e03_4.png; si_s05_0.png; sl_h03_2.png","Shoreline, Unknown"
+2:39:34,2:44:34,gourmand,sl,"SL_E02, SL_C07, OE_RUIN08, SI_S04","sl_e02_0.png, sl_e02_3.png, sl_e02_4.png, sl_e02_2.png; sl_c07_2.png; oe_ruin08_1.png; si_s04_0.png","Shoreline, Unknown"
+2:44:34,2:49:34,gourmand,sl,"SL_E02, SI_A21, SL_C05, OE_RUIN23","sl_e02_3.png, sl_e02_4.png, sl_e02_2.png, sl_e02_0.png; si_a21_0.png; sl_c05_1.png; oe_ruin23_2.png","Shoreline, Sky Islands"
+2:49:34,2:54:34,gourmand,sl,"SL_E02, SI_A20, OE_RUIN11, OE_S03","sl_e02_0.png, sl_e02_3.png, sl_e02_4.png, sl_e02_2.png; si_a20_0.png; oe_ruin11_1.png; oe_s03_0.png","Shoreline, Unknown"
+2:54:34,2:59:34,gourmand,sl,"SL_E02, SL_C07, OE_RUIN08, SI_A21","sl_e02_3.png, sl_e02_4.png, sl_e02_2.png, sl_e02_0.png; sl_c07_2.png; oe_ruin08_1.png; si_a21_0.png","Shoreline, Unknown"
+2:59:34,3:04:34,gourmand,sl,"SL_C15, SL_E02, SI_S04, SL_C05","sl_c15_0.png; sl_e02_4.png, sl_e02_3.png, sl_e02_2.png, sl_e02_0.png; si_s04_0.png; sl_c05_1.png","Unknown, Shoreline"
+3:04:34,3:09:34,gourmand,oe,"SI_S05, OE_RUIN23, SL_ROOF01, OE_S04","si_s05_0.png; oe_ruin23_0.png; sl_roof01_3.png, sl_roof01_5.png; oe_s04_0.png","Outer Expanse, Sunken Pier, Unknown"
+3:09:34,3:14:34,gourmand,oe,"OE_RAIL02, OE_TOWER04, OE_TOWER05, OE_TOWER06","oe_rail02_2.png; oe_tower04_1.png, oe_tower04_2.png; oe_tower05_3.png; oe_tower06_1.png","Unknown, Sunken Pier"
+3:14:34,3:19:34,gourmand,oe,OE_RAIL02,oe_rail02_2.png,Unknown
