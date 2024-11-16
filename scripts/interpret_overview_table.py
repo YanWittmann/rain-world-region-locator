@@ -66,6 +66,7 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
                     reverse=True
                 )[:subregion_limit]
                 top_subregion_names = [subregion if subregion else 'none' for subregion, count in top_subregions]
+                top_subregion_names = [subregion for subregion in top_subregion_names if subregion != 'none']
                 summaries.append({
                     'start_time': format_timedelta(start_time),
                     'end_time': format_timedelta(end_time),
