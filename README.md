@@ -213,6 +213,11 @@ An example can be found in
 or
 [Gourmand - Rain World Blind #32 [WOU3KgRc13g]-converted.md](doc/Gourmand%20-%20Rain%20World%20Blind%20%2332%20%5BWOU3KgRc13g%5D-converted.md).
 
+I highly recommend placing the generated files in the directory of the Rain World screenshots,
+as the images are linked in the output.
+Also, get the imagus browser extension to view the images by hovering over the links.
+This way, I got the most out of the generated files.
+
 ### interpret_csv.py
 
 The `interpret_csv.py` script converts the JSON output from the `process_video.py` script into a CSV format,
