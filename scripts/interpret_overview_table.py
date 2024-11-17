@@ -310,7 +310,7 @@ def generate_html(summaries, video_file, output_file, transcript_data=None):
         html_content += f"""
                     <tr>
                         <td>{summary['start_time']}</td>
-                        <td><a href="{summary['slugcat']}">{summary['slugcat']}</a><br><a href="{summary['slugcat']}/{summary['region']}">{summary['region']}</a></td>
+                        <td><a href="{summary['slugcat']}/{summary['region']}">{summary['region']}</a></td>
                         <td>{summary['subregions']}</td>
                         <td>{summary['rooms']}</td>
                         {'<td>' + summary['transcript'] + '</td>' if is_any_transcript else ''}

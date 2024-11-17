@@ -94,3 +94,20 @@ class ImageMatcher:
                     'distance': distance
                 }
         return best_match
+
+    def match_image_top_n(self, image, n=1):
+        input_hash = self.average_hash(image)
+        matches = []
+        for hash_entry in self.hashes:
+            dataset_hash = hash_entry['hash']
+            distance = self.hamming_distance(input_hash, dataset_hash)
+            matches.append({
+                'slugcat': hash_entry['slugcat'],
+                'region': hash_entry['region'],
+                'filename': hash_entry['filename'],
+                'room_key': hash_entry['room_key'],
+                'room_metadata': hash_entry['room_metadata'],
+                'distance': distance
+            })
+        matches.sort(key=lambda x: x['distance'])
+        return matches[:n]

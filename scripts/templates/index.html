@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Matcher</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .left-column {
+            flex: 1;
+        }
+
+        .right-column {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #drop-area {
+            border: 2px dashed #3498db;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            background-color: #ecf0f1;
+            transition: all 0.3s ease;
+        }
+
+        #drop-area.hover {
+            border-color: #2980b9;
+            background-color: #e0e6e8;
+        }
+
+        #fileElem {
+            display: none;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        #results {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-gap: 20px;
+            grid-auto-flow: dense;
+        }
+
+        .result-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .result-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .result-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .result-info {
+            padding-left: 15px;
+            padding-top: 3px;
+            padding-bottom: 5px;
+        }
+
+        .result-info h3 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #2c3e50;
+        }
+
+        .result-info p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #454c4d;
+        }
+
+        #server-info {
+            background-color: #ececec;
+            color: #383838;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-family: monospace;
+        }
+
+        #source-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+
+        .image-container {
+            width: 266px;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="left-column">
+        <div id="drop-area">
+            <p>Drag & Drop an image or paste it from the clipboard.</p>
+            <input type="file" id="fileElem" accept="image/*">
+            <label class="button" for="fileElem">Select an image</label>
+        </div>
+    </div>
+    <div class="right-column">
+        <div class="image-container">
+            <img id="source-image" alt="">
+        </div>
+    </div>
+</div>
+<div id="results"></div>
+<div id="server-info"></div>
+
+<script>
+    let dropArea = document.getElementById('drop-area')
+    let sourceImage = document.getElementById('source-image')
+
+    ;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, preventDefaults, false)
+        document.body.addEventListener(eventName, preventDefaults, false)
+    })
+
+    ;['dragenter', 'dragover'].forEach(eventName => {
+        dropArea.addEventListener(eventName, highlight, false)
+    })
+
+    ;['dragleave', 'drop'].forEach(eventName => {
+        dropArea.addEventListener(eventName, unhighlight, false)
+    })
+
+    dropArea.addEventListener('drop', handleDrop, false)
+    document.addEventListener('paste', handlePaste, false)
+
+    function preventDefaults(e) {
+        e.preventDefault()
+        e.stopPropagation()
+    }
+
+    function highlight(e) {
+        dropArea.classList.add('hover')
+    }
+
+    function unhighlight(e) {
+        dropArea.classList.remove('hover')
+    }
+
+    function handleDrop(e) {
+        let dt = e.dataTransfer
+        let files = dt.files
+        handleFiles(files)
+    }
+
+    function handlePaste(e) {
+        let items = e.clipboardData.items;
+        for (let i = 0; i < items.length; i++) {
+            if (items[i].type.indexOf('image') !== -1) {
+                let file = items[i].getAsFile();
+                let files = [file];
+                handleFiles(files);
+                break;
+            }
+        }
+    }
+
+    function handleFiles(files) {
+        files = [...files]
+        files.forEach(uploadFile)
+    }
+
+    function uploadFile(file) {
+        let url = '/upload_image'
+        let formData = new FormData()
+        let reader = new FileReader()
+        reader.readAsDataURL(file)
+        reader.onloadend = function () {
+            let base64data = reader.result
+            sourceImage.src = base64data
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({'image': base64data, 'n': 10})
+            }).then(response => response.json())
+                .then(data => {
+                    displayResults(data)
+                })
+        }
+    }
+
+    function buildMapUrl(match) {
+        const baseUrl = 'https://rain-world-map.github.io/map.html';
+        const params = new URLSearchParams({
+            slugcat: match.slugcat,
+            region: match.region.toUpperCase(),
+            room: match.room_key
+        });
+        return `${baseUrl}?${params.toString()}`;
+    }
+
+    function displayResults(data) {
+        let resultsDiv = document.getElementById('results')
+        resultsDiv.innerHTML = ''
+        if (data.error) {
+            resultsDiv.innerHTML = '<p>' + data.error + '</p>'
+            return
+        }
+        data.matches.forEach(match => {
+            let card = document.createElement('div')
+            card.className = 'result-card'
+
+            let link = document.createElement('a')
+            link.href = buildMapUrl(match)
+            link.target = '_blank'
+            link.rel = 'noopener noreferrer'
+
+            let img = document.createElement('img')
+            img.src = match.image_path
+            img.alt = `${match.slugcat}/${match.region}`
+            link.appendChild(img)
+            card.appendChild(link)
+
+            let info = document.createElement('div')
+            info.className = 'result-info'
+
+            let title = document.createElement('h3')
+            title.textContent = `${match.slugcat}/${match.region}`
+            info.appendChild(title)
+
+            let roomKey = document.createElement('p')
+            roomKey.textContent = `Room Key: ${match.room_key}`
+            info.appendChild(roomKey)
+
+            let filename = document.createElement('p')
+            filename.textContent = `File: ${match.filename}`
+            info.appendChild(filename)
+
+            let distance = document.createElement('p')
+            distance.textContent = `Distance: ${match.distance.toFixed(2)}`
+            info.appendChild(distance)
+
+            card.appendChild(info)
+            resultsDiv.appendChild(card)
+        })
+    }
+
+    // Fetch and display the server info
+    fetch('/get_base_path')
+        .then(response => response.json())
+        .then(data => {
+            let serverInfoDiv = document.getElementById('server-info')
+            serverInfoDiv.innerHTML = `<code>cd "${data.base_path}"</code><br><code>python -m http.server</code>`
+        })
+</script>
+
+</body>
+</html>
