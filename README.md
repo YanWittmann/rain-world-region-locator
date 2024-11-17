@@ -52,13 +52,19 @@ For a video:
 2. [interpret_overview_table.py](#interpret_overview_tablepy):
    This will convert the JSON file into a Markdown or HTML file, with aggregated data over time intervals.
 3. [Download video transcript](#download-video-transcript):
-   Download the video transcript from YouTube.
+   Download the video transcript as CSV from YouTube using https://www.youtube-transcript.io.
 4. [transcript_summarizer.py](#transcript_summarizerpy):
    This will create short descriptions of sections of the video transcript.
 5. [interpret_csv.py](#interpret_csvpy):
    Same as above, but in CSV format.
 
 I will use https://www.youtube.com/watch?v=WOU3KgRc13g&list=PL68V5Cxs_CvTOxamvSacuCQ8mruxnnQ7X&index=33 as an example.
+
+A quick-script that combines all these video scripts can be found in `complete.py`.
+
+```bash
+python complete.py "I:\raw\Gourmand - Rain World Blind #32 [WOU3KgRc13g]-converted.mp4" --start_time 1140 --search_filter "gourmand/oe,gourmand/sl" --transcript_file "I:\raw\Gourmand - Rain World Blind #32.csv"
+```
 
 ### Rain World Screenshots
 
@@ -316,4 +322,8 @@ Perform on video:
 ```bash
 python process_video.py "<path_to_video>" "<path_to_screenshots>" --search_filter "<slugcat_or_region_filter>"
 python interpret_overview_table.py "<path_to_json>" --format html --output_file "<output_file_name>"
+```
+
+```bash
+python complete.py "I:\video-projects\oliver-rain-world\raw\Gourmand - Rain World Blind #32 [WOU3KgRc13g]-converted.mp4" --start_time 1140 --search_filter "gourmand/oe,gourmand/sl" --transcript_file "I:\projects\rain-world-region-locator\data\Gourmand - Rain World Blind #32.csv"
 ```

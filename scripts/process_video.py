@@ -13,6 +13,7 @@ def parse_arguments():
     parser.add_argument('base_dir', help='Base directory containing images.')
     parser.add_argument('--search_filter',
                         help='Comma-separated list of slugcat/region pairs or slugcat names to filter the search.')
+    parser.add_argument('--output_file', default='infer', help='Path to the output JSON file.')
     parser.add_argument('--interval', type=float, default=10.0, help='Interval in seconds between frames to process.')
     parser.add_argument('--start_time', type=float, default=0.0, help='Start time in seconds.')
     parser.add_argument('--write_interval', type=int, default=10, help='Write the updated list every x intervals.')
@@ -57,7 +58,12 @@ def main():
     results = []
     intervals_processed = 0
 
-    json_filename = os.path.splitext(os.path.basename(video_file))[0] + '.json'
+    if args.output_file != 'infer':
+        json_filename = args.output_file
+    else:
+        video_filename = os.path.basename(video_file)
+        base_name, _ = os.path.splitext(video_filename)
+        json_filename = os.path.join(os.path.dirname(video_file), f"{base_name}.json")
 
     while current_frame < total_frames:
         cap.set(cv2.CAP_PROP_POS_FRAMES, current_frame)
