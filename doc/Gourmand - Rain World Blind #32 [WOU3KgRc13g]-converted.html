@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Location Summary</title>
+        <title>Gameplay Summary</title>
         <style>
             body {
                 font-family: Arial, sans-serif;
@@ -36,342 +36,419 @@
                 color: #3498db;
                 text-decoration: none;
             }
+            .preview img {
+                max-width: 100px;
+                max-height: 100px;
+                margin-right: 5px;
+            }
+            .preview {
+                white-space: nowrap;
+            }
+            .preview.large img {
+                max-width: 175px;
+                max-height: 175px;
+            }
+            .preview.xlarge img {
+                max-width: 250px;
+                max-height: 250px;
+            }
+            button {
+                padding: 3px 10px;
+                background-color: #3498db;
+                border-radius: 5px;
+                color: #fff;
+                border: none;
+                cursor: pointer;
+            }
         </style>
+        <script>
+            function togglePreviewSize() {
+                const previews = document.querySelectorAll('.preview');
+                previews.forEach(preview => {
+                    if (preview.classList.contains('large')) {
+                        preview.classList.remove('large');
+                        preview.classList.add('xlarge');
+                    } else if (preview.classList.contains('xlarge')) {
+                        preview.classList.remove('xlarge');
+                    } else {
+                        preview.classList.add('large');
+                    }
+                });
+            }
+        </script>
     </head>
     <body>
         <div class="container">
             <h1>Location Summary</h1>
-            <p>The dataset <strong>Gourmand - Rain World Blind #32 [WOU3KgRc13g]-converted</strong> contains footage of the following locations:</p>
+            <p>The dataset <strong>I:\projects\rain-world-region-locator\data\Gourmand - Rain World Blind #32 [WOU3KgRc13g]-converted</strong> contains footage of the following locations:</p>
             <ul>
     <li><a href='gourmand/oe'>gourmand/oe</a></li>
-<li><a href='gourmand/sl'>gourmand/sl</a></li>
-            </ul>
+<li><a href='gourmand/sl'>gourmand/sl</a></li></ul>
+            <h2>Transcript Summary</h2>
+            <p>The player explores and advances through the game, unlocking new areas, mechanics, and lore. Key discoveries include finding alternative routes, skipping sections, timing jumps, using spears strategically, learning to swim and wall jump effectively, developing throwing mechanics, gaining access to shelters, discovering hidden pipes, obtaining food sources, and exploring various environments. The player also uncovers important story elements, such as Timothy's backstory and the connection between Subterranean and other areas. Significant events include near-death experiences, interactions with enemies like Nomads and leeches, and character deaths.</p>
+        
             <h2>Details</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Slugcat</th>
                         <th>Region</th>
                         <th>Subregion</th>
                         <th>Most Frequent Rooms</th>
-                        <th>Room Images</th>
+                        <th>Transcript Summary</th>
+                        <th>Preview <button style="margin-left:5px" onclick="togglePreviewSize()">Resize</button></th>
+                        <th>Rooms</th>
                     </tr>
                 </thead>
                 <tbody>
     
                     <tr>
                         <td>0:19:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
                         <td>Sunken Pier</td>
                         <td>OE_RAIL03, SI_B07x, OE_S04, OE_SPIRE</td>
-                        <td><a href='./gourmand/oe/oe_rail03_1.png'>oe_rail03_1.png</a>, <a href='./gourmand/oe/oe_rail03_0.png'>oe_rail03_0.png</a>, <a href='./gourmand/si/si_b07x_1.png'>si_b07x_1.png</a>, <a href='./gourmand/si/si_b07x_0.png'>si_b07x_0.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a>, <a href='./gourmand/oe/oe_spire_1.png'>oe_spire_1.png</a></td>
+                        <td>gets stuck in a level, finds alternative method to progress, and decides to restart cycle with a focus on finding a way back</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_rail03_0.png' alt='oe_rail03_0.png'><img src='./gourmand/oe/oe_rail03_1.png' alt='oe_rail03_1.png'><img src='./gourmand/si/si_b07x_0.png' alt='si_b07x_0.png'></td>
+                        <td><a href='./gourmand/oe/oe_rail03_0.png'>oe_rail03_0.png</a>, <a href='./gourmand/oe/oe_rail03_1.png'>oe_rail03_1.png</a>, <a href='./gourmand/si/si_b07x_0.png'>si_b07x_0.png</a>, <a href='./gourmand/si/si_b07x_1.png'>si_b07x_1.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a>, <a href='./gourmand/oe/oe_spire_1.png'>oe_spire_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:24:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
-                        <td>Sunken Pier, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
+                        <td>Sunken Pier</td>
                         <td>OE_RAIL03, OE_RAIL02, OE_S04, SI_S05</td>
-                        <td><a href='./gourmand/oe/oe_rail03_1.png'>oe_rail03_1.png</a>, <a href='./gourmand/oe/oe_rail03_4.png'>oe_rail03_4.png</a>, <a href='./gourmand/oe/oe_rail03_0.png'>oe_rail03_0.png</a>, <a href='./gourmand/oe/oe_rail03_2.png'>oe_rail03_2.png</a>, <a href='./gourmand/oe/oe_rail02_3.png'>oe_rail02_3.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a></td>
+                        <td>obtains Spears, explores new areas, discovers alternative passage and another pipe, learns Karma doesn't affect current progression.</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_rail03_2.png' alt='oe_rail03_2.png'><img src='./gourmand/oe/oe_rail03_4.png' alt='oe_rail03_4.png'><img src='./gourmand/oe/oe_rail03_0.png' alt='oe_rail03_0.png'></td>
+                        <td><a href='./gourmand/oe/oe_rail03_2.png'>oe_rail03_2.png</a>, <a href='./gourmand/oe/oe_rail03_4.png'>oe_rail03_4.png</a>, <a href='./gourmand/oe/oe_rail03_0.png'>oe_rail03_0.png</a>, <a href='./gourmand/oe/oe_rail03_1.png'>oe_rail03_1.png</a>, <a href='./gourmand/oe/oe_rail02_3.png'>oe_rail02_3.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:29:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
                         <td>Sunken Pier</td>
                         <td>OE_RAIL01, OE_RAIL03, OE_CAVE03, OE_S04</td>
-                        <td><a href='./gourmand/oe/oe_rail01_5.png'>oe_rail01_5.png</a>, <a href='./gourmand/oe/oe_rail01_0.png'>oe_rail01_0.png</a>, <a href='./gourmand/oe/oe_rail01_2.png'>oe_rail01_2.png</a>, <a href='./gourmand/oe/oe_rail01_1.png'>oe_rail01_1.png</a>, <a href='./gourmand/oe/oe_rail01_4.png'>oe_rail01_4.png</a>, <a href='./gourmand/oe/oe_rail01_3.png'>oe_rail01_3.png</a>, <a href='./gourmand/oe/oe_rail03_3.png'>oe_rail03_3.png</a>, <a href='./gourmand/oe/oe_rail03_2.png'>oe_rail03_2.png</a>, <a href='./gourmand/oe/oe_rail03_5.png'>oe_rail03_5.png</a>, <a href='./gourmand/oe/oe_rail03_1.png'>oe_rail03_1.png</a>, <a href='./gourmand/oe/oe_rail03_0.png'>oe_rail03_0.png</a>, <a href='./gourmand/oe/oe_cave03_4.png'>oe_cave03_4.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a></td>
+                        <td>discovers hidden hole and continues progress; explores new area</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_rail01_4.png' alt='oe_rail01_4.png'><img src='./gourmand/oe/oe_rail01_5.png' alt='oe_rail01_5.png'><img src='./gourmand/oe/oe_rail01_1.png' alt='oe_rail01_1.png'></td>
+                        <td><a href='./gourmand/oe/oe_rail01_4.png'>oe_rail01_4.png</a>, <a href='./gourmand/oe/oe_rail01_5.png'>oe_rail01_5.png</a>, <a href='./gourmand/oe/oe_rail01_1.png'>oe_rail01_1.png</a>, <a href='./gourmand/oe/oe_rail01_2.png'>oe_rail01_2.png</a>, <a href='./gourmand/oe/oe_rail01_3.png'>oe_rail01_3.png</a>, <a href='./gourmand/oe/oe_rail01_0.png'>oe_rail01_0.png</a>, <a href='./gourmand/oe/oe_rail03_3.png'>oe_rail03_3.png</a>, <a href='./gourmand/oe/oe_rail03_2.png'>oe_rail03_2.png</a>, <a href='./gourmand/oe/oe_rail03_1.png'>oe_rail03_1.png</a>, <a href='./gourmand/oe/oe_rail03_0.png'>oe_rail03_0.png</a>, <a href='./gourmand/oe/oe_rail03_5.png'>oe_rail03_5.png</a>, <a href='./gourmand/oe/oe_cave03_4.png'>oe_cave03_4.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:34:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
-                        <td>Unknown, Sunken Pier, Outer Expanse</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
+                        <td>Sunken Pier, Outer Expanse</td>
                         <td>OE_RAIL01, OE_RAIL05, OE_CAVE04, OE_RUIN17</td>
-                        <td><a href='./gourmand/oe/oe_rail01_5.png'>oe_rail01_5.png</a>, <a href='./gourmand/oe/oe_rail01_4.png'>oe_rail01_4.png</a>, <a href='./gourmand/oe/oe_rail01_10.png'>oe_rail01_10.png</a>, <a href='./gourmand/oe/oe_rail05_1.png'>oe_rail05_1.png</a>, <a href='./gourmand/oe/oe_rail05_0.png'>oe_rail05_0.png</a>, <a href='./gourmand/oe/oe_cave04_1.png'>oe_cave04_1.png</a>, <a href='./gourmand/oe/oe_ruin17_1.png'>oe_ruin17_1.png</a></td>
+                        <td>Obtained shelter, food, and fruit; discovered locked-off area with grass.</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_rail01_4.png' alt='oe_rail01_4.png'><img src='./gourmand/oe/oe_rail01_5.png' alt='oe_rail01_5.png'><img src='./gourmand/oe/oe_rail01_10.png' alt='oe_rail01_10.png'></td>
+                        <td><a href='./gourmand/oe/oe_rail01_4.png'>oe_rail01_4.png</a>, <a href='./gourmand/oe/oe_rail01_5.png'>oe_rail01_5.png</a>, <a href='./gourmand/oe/oe_rail01_10.png'>oe_rail01_10.png</a>, <a href='./gourmand/oe/oe_rail05_0.png'>oe_rail05_0.png</a>, <a href='./gourmand/oe/oe_rail05_1.png'>oe_rail05_1.png</a>, <a href='./gourmand/oe/oe_cave04_1.png'>oe_cave04_1.png</a>, <a href='./gourmand/oe/oe_ruin17_1.png'>oe_ruin17_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:39:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
-                        <td>Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
+                        <td></td>
                         <td>OE_TOWER14, GATE_SB_OE, OE_RAIL06, OE_CAVE15</td>
-                        <td><a href='./gourmand/oe/oe_tower14_1.png'>oe_tower14_1.png</a>, <a href='./gourmand/gate/gate_sb_oe_0.png'>gate_sb_oe_0.png</a>, <a href='./gourmand/oe/oe_rail06_1.png'>oe_rail06_1.png</a>, <a href='./gourmand/oe/oe_rail06_4.png'>oe_rail06_4.png</a>, <a href='./gourmand/oe/oe_cave15_0.png'>oe_cave15_0.png</a>, <a href='./gourmand/oe/oe_cave15_1.png'>oe_cave15_1.png</a></td>
+                        <td>Obtain spears, combine meals, explore new areas and encounter significant enemies (Nomad) with improved equipment.</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_tower14_1.png' alt='oe_tower14_1.png'><img src='./gourmand/oe/gate_sb_oe_0.png' alt='gate_sb_oe_0.png'><img src='./gourmand/oe/oe_rail06_1.png' alt='oe_rail06_1.png'></td>
+                        <td><a href='./gourmand/oe/oe_tower14_1.png'>oe_tower14_1.png</a>, <a href='./gourmand/oe/gate_sb_oe_0.png'>gate_sb_oe_0.png</a>, <a href='./gourmand/oe/oe_rail06_1.png'>oe_rail06_1.png</a>, <a href='./gourmand/oe/oe_rail06_4.png'>oe_rail06_4.png</a>, <a href='./gourmand/oe/oe_cave15_0.png'>oe_cave15_0.png</a>, <a href='./gourmand/oe/oe_cave15_1.png'>oe_cave15_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:44:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
-                        <td>Outer Expanse, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
+                        <td>Outer Expanse</td>
                         <td>OE_CAVE04, OE_RUIN08, OE_RUIN10, OE_TOWER14</td>
+                        <td>Obtained a spear, possibly used it to distract enemies for exploration. Encountered an environmental shift with train tracks collapsed, potentially blocking progress.</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_cave04_1.png' alt='oe_cave04_1.png'><img src='./gourmand/oe/oe_ruin08_0.png' alt='oe_ruin08_0.png'><img src='./gourmand/oe/oe_ruin10_0.png' alt='oe_ruin10_0.png'></td>
                         <td><a href='./gourmand/oe/oe_cave04_1.png'>oe_cave04_1.png</a>, <a href='./gourmand/oe/oe_ruin08_0.png'>oe_ruin08_0.png</a>, <a href='./gourmand/oe/oe_ruin10_0.png'>oe_ruin10_0.png</a>, <a href='./gourmand/oe/oe_ruin10_1.png'>oe_ruin10_1.png</a>, <a href='./gourmand/oe/oe_tower14_1.png'>oe_tower14_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:49:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
                         <td>Outer Expanse, Shoreline, Looks to the Moon</td>
                         <td>OE_CAVE04, SL_AI, OE_RUIN09, OE_RUIN10</td>
+                        <td>Obtain Spears, distract grass with Red Plant, use Spears strategically & climb up, collect enough for pearl.</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_cave04_1.png' alt='oe_cave04_1.png'><img src='./gourmand/sl/sl_ai_0.png' alt='sl_ai_0.png'><img src='./gourmand/oe/oe_ruin09_1.png' alt='oe_ruin09_1.png'></td>
                         <td><a href='./gourmand/oe/oe_cave04_1.png'>oe_cave04_1.png</a>, <a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/oe/oe_ruin09_1.png'>oe_ruin09_1.png</a>, <a href='./gourmand/oe/oe_ruin10_1.png'>oe_ruin10_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:54:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Looks to the Moon, Outer Expanse</td>
                         <td>SL_AI, SL_I01, OE_RUIN10, SL_ROOF04</td>
-                        <td><a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/oe/oe_ruin10_1.png'>oe_ruin10_1.png</a>, <a href='./gourmand/sl/sl_roof04_2.png'>sl_roof04_2.png</a>, <a href='./gourmand/sl/sl_roof04_3.png'>sl_roof04_3.png</a></td>
+                        <td>Obtain Pearl, learn about Timothy's backstory, consider combining items, and decide to hunt Aztec.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_ai_0.png' alt='sl_ai_0.png'><img src='./gourmand/sl/sl_i01_3.png' alt='sl_i01_3.png'><img src='./gourmand/oe/oe_ruin10_1.png' alt='oe_ruin10_1.png'></td>
+                        <td><a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/oe/oe_ruin10_1.png'>oe_ruin10_1.png</a>, <a href='./gourmand/sl/sl_roof04_3.png'>sl_roof04_3.png</a>, <a href='./gourmand/sl/sl_roof04_2.png'>sl_roof04_2.png</a></td>
                     </tr>
         
                     <tr>
                         <td>0:59:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
-                        <td>Outer Expanse, Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
+                        <td>Outer Expanse, Shoreline</td>
                         <td>SL_E02, OE_RUIN10, OE_S05x, OE_RUIN08</td>
+                        <td>Obtain new item/upgrade (Pearls), discuss story elements (Timothy the Dragon Slayer, Pipyard), and learn important information for progressing through the game.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/oe/oe_ruin10_0.png' alt='oe_ruin10_0.png'><img src='./gourmand/oe/oe_ruin10_1.png' alt='oe_ruin10_1.png'></td>
                         <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/oe/oe_ruin10_0.png'>oe_ruin10_0.png</a>, <a href='./gourmand/oe/oe_ruin10_1.png'>oe_ruin10_1.png</a>, <a href='./gourmand/oe/oe_s05x_0.png'>oe_s05x_0.png</a>, <a href='./gourmand/oe/oe_ruin08_0.png'>oe_ruin08_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:04:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Unknown, Shoreline</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_TUNNELA, SL_D02, SI_S04, OE_CAVE13</td>
-                        <td><a href='./gourmand/sl/sl_tunnela_4.png'>sl_tunnela_4.png</a>, <a href='./gourmand/sl/sl_tunnela_3.png'>sl_tunnela_3.png</a>, <a href='./gourmand/sl/sl_tunnela_2.png'>sl_tunnela_2.png</a>, <a href='./gourmand/sl/sl_tunnela_0.png'>sl_tunnela_0.png</a>, <a href='./gourmand/sl/sl_tunnela_1.png'>sl_tunnela_1.png</a>, <a href='./gourmand/sl/sl_d02_2.png'>sl_d02_2.png</a>, <a href='./gourmand/si/si_s04_0.png'>si_s04_0.png</a>, <a href='./gourmand/oe/oe_cave13_1.png'>oe_cave13_1.png</a></td>
+                        <td>discovers a shelter, considers multiple paths, attempts to avoid leeches by swimming underneath them, and realizes this could be a viable strategy.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_tunnela_3.png' alt='sl_tunnela_3.png'><img src='./gourmand/sl/sl_tunnela_2.png' alt='sl_tunnela_2.png'><img src='./gourmand/sl/sl_tunnela_1.png' alt='sl_tunnela_1.png'></td>
+                        <td><a href='./gourmand/sl/sl_tunnela_3.png'>sl_tunnela_3.png</a>, <a href='./gourmand/sl/sl_tunnela_2.png'>sl_tunnela_2.png</a>, <a href='./gourmand/sl/sl_tunnela_1.png'>sl_tunnela_1.png</a>, <a href='./gourmand/sl/sl_tunnela_4.png'>sl_tunnela_4.png</a>, <a href='./gourmand/sl/sl_tunnela_0.png'>sl_tunnela_0.png</a>, <a href='./gourmand/sl/sl_d02_2.png'>sl_d02_2.png</a>, <a href='./gourmand/si/si_s04_0.png'>si_s04_0.png</a>, <a href='./gourmand/oe/oe_cave13_1.png'>oe_cave13_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:09:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_C04, SL_D01, SL_TUNNELA, GATE_SI_LF</td>
-                        <td><a href='./gourmand/sl/sl_c04_0.png'>sl_c04_0.png</a>, <a href='./gourmand/sl/sl_d01_0.png'>sl_d01_0.png</a>, <a href='./gourmand/sl/sl_d01_3.png'>sl_d01_3.png</a>, <a href='./gourmand/sl/sl_tunnela_2.png'>sl_tunnela_2.png</a>, <a href='./gourmand/sl/sl_tunnela_3.png'>sl_tunnela_3.png</a>, <a href='./gourmand/sl/sl_tunnela_4.png'>sl_tunnela_4.png</a>, <a href='./gourmand/sl/sl_tunnela_0.png'>sl_tunnela_0.png</a>, <a href='./gourmand/gate/gate_si_lf_0.png'>gate_si_lf_0.png</a></td>
+                        <td>discovers hidden pipe to shelter, finds food and maxes out health, then learns about questing for Moon's location and decides to head right at the coast.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_c04_0.png' alt='sl_c04_0.png'><img src='./gourmand/sl/sl_d01_3.png' alt='sl_d01_3.png'><img src='./gourmand/sl/sl_d01_0.png' alt='sl_d01_0.png'></td>
+                        <td><a href='./gourmand/sl/sl_c04_0.png'>sl_c04_0.png</a>, <a href='./gourmand/sl/sl_d01_3.png'>sl_d01_3.png</a>, <a href='./gourmand/sl/sl_d01_0.png'>sl_d01_0.png</a>, <a href='./gourmand/sl/sl_tunnela_4.png'>sl_tunnela_4.png</a>, <a href='./gourmand/sl/sl_tunnela_3.png'>sl_tunnela_3.png</a>, <a href='./gourmand/sl/sl_tunnela_0.png'>sl_tunnela_0.png</a>, <a href='./gourmand/sl/sl_tunnela_2.png'>sl_tunnela_2.png</a>, <a href='./gourmand/lf/gate_si_lf_0.png'>gate_si_lf_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:14:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown, Outer Expanse</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline, Outer Expanse</td>
                         <td>SL_C04, SL_D01, OE_CAVE17, SL_C05</td>
-                        <td><a href='./gourmand/sl/sl_c04_0.png'>sl_c04_0.png</a>, <a href='./gourmand/sl/sl_c04_2.png'>sl_c04_2.png</a>, <a href='./gourmand/sl/sl_d01_0.png'>sl_d01_0.png</a>, <a href='./gourmand/sl/sl_d01_3.png'>sl_d01_3.png</a>, <a href='./gourmand/oe/oe_cave17_0.png'>oe_cave17_0.png</a>, <a href='./gourmand/sl/sl_c05_2.png'>sl_c05_2.png</a></td>
+                        <td>Obtain food, discover a shelter, encounter new enemies, and realize one pipe leads nowhere. Learn to wall jump effectively.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_c04_2.png' alt='sl_c04_2.png'><img src='./gourmand/sl/sl_c04_0.png' alt='sl_c04_0.png'><img src='./gourmand/sl/sl_d01_0.png' alt='sl_d01_0.png'></td>
+                        <td><a href='./gourmand/sl/sl_c04_2.png'>sl_c04_2.png</a>, <a href='./gourmand/sl/sl_c04_0.png'>sl_c04_0.png</a>, <a href='./gourmand/sl/sl_d01_0.png'>sl_d01_0.png</a>, <a href='./gourmand/sl/sl_d01_3.png'>sl_d01_3.png</a>, <a href='./gourmand/oe/oe_cave17_0.png'>oe_cave17_0.png</a>, <a href='./gourmand/sl/sl_c05_2.png'>sl_c05_2.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:19:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_C03, SL_A03, SL_D01, SL_D03</td>
-                        <td><a href='./gourmand/sl/sl_c03_1.png'>sl_c03_1.png</a>, <a href='./gourmand/sl/sl_c03_2.png'>sl_c03_2.png</a>, <a href='./gourmand/sl/sl_c03_0.png'>sl_c03_0.png</a>, <a href='./gourmand/sl/sl_a03_0.png'>sl_a03_0.png</a>, <a href='./gourmand/sl/sl_d01_0.png'>sl_d01_0.png</a>, <a href='./gourmand/sl/sl_d01_3.png'>sl_d01_3.png</a>, <a href='./gourmand/sl/sl_d03_0.png'>sl_d03_0.png</a></td>
+                        <td>Obtained food, pearls, and discovered more top-right map content; realized goal is not to eat but to check pipes for Moon God route.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_c03_0.png' alt='sl_c03_0.png'><img src='./gourmand/sl/sl_c03_1.png' alt='sl_c03_1.png'><img src='./gourmand/sl/sl_c03_2.png' alt='sl_c03_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_c03_0.png'>sl_c03_0.png</a>, <a href='./gourmand/sl/sl_c03_1.png'>sl_c03_1.png</a>, <a href='./gourmand/sl/sl_c03_2.png'>sl_c03_2.png</a>, <a href='./gourmand/sl/sl_a03_0.png'>sl_a03_0.png</a>, <a href='./gourmand/sl/sl_d01_0.png'>sl_d01_0.png</a>, <a href='./gourmand/sl/sl_d01_3.png'>sl_d01_3.png</a>, <a href='./gourmand/sl/sl_d03_0.png'>sl_d03_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:24:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Shoreline</td>
                         <td>SL_D04, SL_F02, SL_H02, SL_A12</td>
-                        <td><a href='./gourmand/sl/sl_d04_1.png'>sl_d04_1.png</a>, <a href='./gourmand/sl/sl_d04_0.png'>sl_d04_0.png</a>, <a href='./gourmand/sl/sl_f02_2.png'>sl_f02_2.png</a>, <a href='./gourmand/sl/sl_h02_0.png'>sl_h02_0.png</a>, <a href='./gourmand/sl/sl_h02_1.png'>sl_h02_1.png</a>, <a href='./gourmand/sl/sl_h02_6.png'>sl_h02_6.png</a>, <a href='./gourmand/sl/sl_h02_2.png'>sl_h02_2.png</a>, <a href='./gourmand/sl/sl_a12_0.png'>sl_a12_0.png</a></td>
+                        <td>obtains pearls, food, and potentially a new area. No significant story or lore information.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_d04_1.png' alt='sl_d04_1.png'><img src='./gourmand/sl/sl_d04_0.png' alt='sl_d04_0.png'><img src='./gourmand/sl/sl_f02_2.png' alt='sl_f02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_d04_1.png'>sl_d04_1.png</a>, <a href='./gourmand/sl/sl_d04_0.png'>sl_d04_0.png</a>, <a href='./gourmand/sl/sl_f02_2.png'>sl_f02_2.png</a>, <a href='./gourmand/sl/sl_h02_6.png'>sl_h02_6.png</a>, <a href='./gourmand/sl/sl_h02_2.png'>sl_h02_2.png</a>, <a href='./gourmand/sl/sl_h02_1.png'>sl_h02_1.png</a>, <a href='./gourmand/sl/sl_h02_0.png'>sl_h02_0.png</a>, <a href='./gourmand/sl/sl_a12_0.png'>sl_a12_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:29:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Looks to the Moon, Shoreline</td>
                         <td>SL_I01, SL_F01, SL_H03, SL_C09</td>
-                        <td><a href='./gourmand/sl/sl_i01_6.png'>sl_i01_6.png</a>, <a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/sl/sl_i01_7.png'>sl_i01_7.png</a>, <a href='./gourmand/sl/sl_f01_1.png'>sl_f01_1.png</a>, <a href='./gourmand/sl/sl_h03_7.png'>sl_h03_7.png</a>, <a href='./gourmand/sl/sl_h03_4.png'>sl_h03_4.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a>, <a href='./gourmand/sl/sl_c09_1.png'>sl_c09_1.png</a>, <a href='./gourmand/sl/sl_c09_2.png'>sl_c09_2.png</a></td>
+                        <td>finds 3 pearls, considering delivering them to Scavengers, potentially making friends</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_i01_3.png' alt='sl_i01_3.png'><img src='./gourmand/sl/sl_i01_7.png' alt='sl_i01_7.png'><img src='./gourmand/sl/sl_i01_6.png' alt='sl_i01_6.png'></td>
+                        <td><a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/sl/sl_i01_7.png'>sl_i01_7.png</a>, <a href='./gourmand/sl/sl_i01_6.png'>sl_i01_6.png</a>, <a href='./gourmand/sl/sl_f01_1.png'>sl_f01_1.png</a>, <a href='./gourmand/sl/sl_h03_7.png'>sl_h03_7.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a>, <a href='./gourmand/sl/sl_h03_4.png'>sl_h03_4.png</a>, <a href='./gourmand/sl/sl_c09_1.png'>sl_c09_1.png</a>, <a href='./gourmand/sl/sl_c09_2.png'>sl_c09_2.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:34:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Looks to the Moon</td>
                         <td>SL_AI, SL_I01, SL_A07, SI_S05</td>
-                        <td><a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a>, <a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/sl/sl_i01_6.png'>sl_i01_6.png</a>, <a href='./gourmand/sl/sl_i01_1.png'>sl_i01_1.png</a>, <a href='./gourmand/sl/sl_i01_5.png'>sl_i01_5.png</a>, <a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/sl/sl_i01_4.png'>sl_i01_4.png</a>, <a href='./gourmand/sl/sl_i01_0.png'>sl_i01_0.png</a>, <a href='./gourmand/sl/sl_a07_0.png'>sl_a07_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a></td>
+                        <td>Discovers pilgrim, learns about Moon's backstory and illness; receives ancient notes from old drill site.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_ai_1.png' alt='sl_ai_1.png'><img src='./gourmand/sl/sl_ai_0.png' alt='sl_ai_0.png'><img src='./gourmand/sl/sl_i01_6.png' alt='sl_i01_6.png'></td>
+                        <td><a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a>, <a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/sl/sl_i01_6.png'>sl_i01_6.png</a>, <a href='./gourmand/sl/sl_i01_4.png'>sl_i01_4.png</a>, <a href='./gourmand/sl/sl_i01_5.png'>sl_i01_5.png</a>, <a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/sl/sl_i01_1.png'>sl_i01_1.png</a>, <a href='./gourmand/sl/sl_i01_0.png'>sl_i01_0.png</a>, <a href='./gourmand/sl/sl_a07_0.png'>sl_a07_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:39:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Looks to the Moon</td>
                         <td>SL_AI</td>
+                        <td>Discovery of abandoned underground mine and potential connection to Frank's death; obtaining 47 operating drill silos' maintenance log (Pearl)</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_ai_1.png' alt='sl_ai_1.png'></td>
                         <td><a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:44:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Looks to the Moon</td>
                         <td>SL_AI, OE_RUIN19</td>
+                        <td>Moon's unavailable status discussed; Caravans' final shipments suspended due to Creator's Global Ascension, leading to frozen trains and machinery ceasing function</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_ai_1.png' alt='sl_ai_1.png'><img src='./gourmand/oe/oe_ruin19_4.png' alt='oe_ruin19_4.png'></td>
                         <td><a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a>, <a href='./gourmand/oe/oe_ruin19_4.png'>oe_ruin19_4.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:49:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Looks to the Moon</td>
                         <td>SL_AI</td>
+                        <td>discusses theory about iterators solving problem; reveals subway system, Railway Bridges, and artificial mountain with cloud layer, questions rain starting</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_ai_1.png' alt='sl_ai_1.png'></td>
                         <td><a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:54:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Looks to the Moon</td>
                         <td>SL_AI</td>
-                        <td><a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a></td>
+                        <td>finds lore information, discovers new pipe and potential alternative route, learns about food importance, finds blue items, and develops throwing mechanics.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_ai_1.png' alt='sl_ai_1.png'><img src='./gourmand/sl/sl_ai_0.png' alt='sl_ai_0.png'></td>
+                        <td><a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a>, <a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>1:59:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Looks to the Moon, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Looks to the Moon</td>
                         <td>SL_I01, SL_AI, SI_S05, OE_RAIL02</td>
-                        <td><a href='./gourmand/sl/sl_i01_6.png'>sl_i01_6.png</a>, <a href='./gourmand/sl/sl_i01_5.png'>sl_i01_5.png</a>, <a href='./gourmand/sl/sl_i01_8.png'>sl_i01_8.png</a>, <a href='./gourmand/sl/sl_i01_7.png'>sl_i01_7.png</a>, <a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/sl/sl_i01_4.png'>sl_i01_4.png</a>, <a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a>, <a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/oe/oe_rail02_3.png'>oe_rail02_3.png</a></td>
+                        <td>Obtaining blue fruit, planning future actions including finding starvation passage</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_i01_7.png' alt='sl_i01_7.png'><img src='./gourmand/sl/sl_i01_4.png' alt='sl_i01_4.png'><img src='./gourmand/sl/sl_i01_6.png' alt='sl_i01_6.png'></td>
+                        <td><a href='./gourmand/sl/sl_i01_7.png'>sl_i01_7.png</a>, <a href='./gourmand/sl/sl_i01_4.png'>sl_i01_4.png</a>, <a href='./gourmand/sl/sl_i01_6.png'>sl_i01_6.png</a>, <a href='./gourmand/sl/sl_i01_5.png'>sl_i01_5.png</a>, <a href='./gourmand/sl/sl_i01_3.png'>sl_i01_3.png</a>, <a href='./gourmand/sl/sl_i01_8.png'>sl_i01_8.png</a>, <a href='./gourmand/sl/sl_ai_1.png'>sl_ai_1.png</a>, <a href='./gourmand/sl/sl_ai_0.png'>sl_ai_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/oe/oe_rail02_3.png'>oe_rail02_3.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:04:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown, Looks to the Moon</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline, Looks to the Moon</td>
                         <td>SL_H03, SL_C09, SI_S05, SL_C07</td>
-                        <td><a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a>, <a href='./gourmand/sl/sl_h03_7.png'>sl_h03_7.png</a>, <a href='./gourmand/sl/sl_h03_4.png'>sl_h03_4.png</a>, <a href='./gourmand/sl/sl_h03_3.png'>sl_h03_3.png</a>, <a href='./gourmand/sl/sl_c09_1.png'>sl_c09_1.png</a>, <a href='./gourmand/sl/sl_c09_2.png'>sl_c09_2.png</a>, <a href='./gourmand/sl/sl_c09_0.png'>sl_c09_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a></td>
+                        <td>discovers new swimming mechanic, gains access to shelters, explores shaded Citadel, and considers impact of dietary choices on Saint upgrades.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_h03_7.png' alt='sl_h03_7.png'><img src='./gourmand/sl/sl_h03_2.png' alt='sl_h03_2.png'><img src='./gourmand/sl/sl_h03_3.png' alt='sl_h03_3.png'></td>
+                        <td><a href='./gourmand/sl/sl_h03_7.png'>sl_h03_7.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a>, <a href='./gourmand/sl/sl_h03_3.png'>sl_h03_3.png</a>, <a href='./gourmand/sl/sl_h03_4.png'>sl_h03_4.png</a>, <a href='./gourmand/sl/sl_c09_1.png'>sl_c09_1.png</a>, <a href='./gourmand/sl/sl_c09_2.png'>sl_c09_2.png</a>, <a href='./gourmand/sl/sl_c09_0.png'>sl_c09_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:09:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_E02, SI_S05, OE_RUIN11, SL_ECNIUS02</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/oe/oe_ruin11_1.png'>oe_ruin11_1.png</a>, <a href='./gourmand/sl/sl_ecnius02_0.png'>sl_ecnius02_0.png</a></td>
+                        <td>Obtaining fruit, finding food quest music, considering using Tom to push player up to unobtainable fruit, and discovering max level status</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/oe/oe_ruin11_1.png'>oe_ruin11_1.png</a>, <a href='./gourmand/sl/sl_ecnius02_0.png'>sl_ecnius02_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:14:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown, Outer Expanse</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline, Outer Expanse</td>
                         <td>SL_E02, SL_H03, SL_C07, SL_ECNIUS02</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a>, <a href='./gourmand/sl/sl_ecnius02_0.png'>sl_ecnius02_0.png</a></td>
+                        <td>Obtain food for Timmy, ignore enemies to get both Monk and Saint characters</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a>, <a href='./gourmand/sl/sl_ecnius02_0.png'>sl_ecnius02_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:19:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Shoreline</td>
                         <td>SL_E02, SL_ECNIUS02, SL_A05, SI_S05</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_ecnius02_0.png'>sl_ecnius02_0.png</a>, <a href='./gourmand/sl/sl_a05_0.png'>sl_a05_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a></td>
+                        <td>Obtain stone, discuss exploring jellyfish, contemplate water level rise, and plan to get monk</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_ecnius02_0.png'>sl_ecnius02_0.png</a>, <a href='./gourmand/sl/sl_a05_0.png'>sl_a05_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:24:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_H03, SL_C07, SL_C04, SL_E02</td>
+                        <td>finds no stone, almost dies, learns they can starve themselves to gain passage and enjoys farming food.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_h03_2.png' alt='sl_h03_2.png'><img src='./gourmand/sl/sl_c07_2.png' alt='sl_c07_2.png'><img src='./gourmand/sl/sl_c04_0.png' alt='sl_c04_0.png'></td>
                         <td><a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a>, <a href='./gourmand/sl/sl_c04_0.png'>sl_c04_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:29:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Shoreline</td>
                         <td>SL_E02, SL_E03, OE_PUMP01, SL_H03</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e03_2.png'>sl_e03_2.png</a>, <a href='./gourmand/sl/sl_e03_1.png'>sl_e03_1.png</a>, <a href='./gourmand/sl/sl_e03_4.png'>sl_e03_4.png</a>, <a href='./gourmand/sl/sl_e03_3.png'>sl_e03_3.png</a>, <a href='./gourmand/oe/oe_pump01_0.png'>oe_pump01_0.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a></td>
+                        <td>Discover new food source, eat and store for shelter, avoid killing possibly living being.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e03_4.png'>sl_e03_4.png</a>, <a href='./gourmand/sl/sl_e03_3.png'>sl_e03_3.png</a>, <a href='./gourmand/sl/sl_e03_2.png'>sl_e03_2.png</a>, <a href='./gourmand/sl/sl_e03_1.png'>sl_e03_1.png</a>, <a href='./gourmand/oe/oe_pump01_0.png'>oe_pump01_0.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:34:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_E02, SL_E03, SI_S05, SL_H03</td>
-                        <td><a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e03_2.png'>sl_e03_2.png</a>, <a href='./gourmand/sl/sl_e03_1.png'>sl_e03_1.png</a>, <a href='./gourmand/sl/sl_e03_4.png'>sl_e03_4.png</a>, <a href='./gourmand/sl/sl_e03_0.png'>sl_e03_0.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a></td>
+                        <td>Explore Shoreline, look for a pearl; encounter a new area, potentially connect to other locations</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_3.png' alt='sl_e02_3.png'><img src='./gourmand/sl/sl_e03_0.png' alt='sl_e03_0.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e03_0.png'>sl_e03_0.png</a>, <a href='./gourmand/sl/sl_e03_4.png'>sl_e03_4.png</a>, <a href='./gourmand/sl/sl_e03_2.png'>sl_e03_2.png</a>, <a href='./gourmand/sl/sl_e03_1.png'>sl_e03_1.png</a>, <a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/sl/sl_h03_2.png'>sl_h03_2.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:39:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_E02, SL_C07, OE_RUIN08, SI_S04</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a>, <a href='./gourmand/oe/oe_ruin08_1.png'>oe_ruin08_1.png</a>, <a href='./gourmand/si/si_s04_0.png'>si_s04_0.png</a></td>
+                        <td>finds a pipe, uses it to find new area with leeches. Tom dies suddenly. Player eats a green fruit, gets an air bubble from it.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a>, <a href='./gourmand/oe/oe_ruin08_1.png'>oe_ruin08_1.png</a>, <a href='./gourmand/si/si_s04_0.png'>si_s04_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:44:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
                         <td>Shoreline, Sky Islands</td>
                         <td>SL_E02, SI_A21, SL_C05, OE_RUIN23</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/si/si_a21_0.png'>si_a21_0.png</a>, <a href='./gourmand/sl/sl_c05_1.png'>sl_c05_1.png</a>, <a href='./gourmand/oe/oe_ruin23_2.png'>oe_ruin23_2.png</a></td>
+                        <td>discovers new mechanics for skipping sections and learns to time jumps, briefly discussing the potential consequences of water on their journey.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/si/si_a21_0.png'>si_a21_0.png</a>, <a href='./gourmand/sl/sl_c05_1.png'>sl_c05_1.png</a>, <a href='./gourmand/oe/oe_ruin23_2.png'>oe_ruin23_2.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:49:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_E02, SI_A20, OE_RUIN11, OE_S03</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/si/si_a20_0.png'>si_a20_0.png</a>, <a href='./gourmand/oe/oe_ruin11_1.png'>oe_ruin11_1.png</a>, <a href='./gourmand/oe/oe_s03_0.png'>oe_s03_0.png</a></td>
+                        <td>dies multiple times, discusses potential strategies for momentum and breath control in water levels.</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/si/si_a20_0.png'>si_a20_0.png</a>, <a href='./gourmand/oe/oe_ruin11_1.png'>oe_ruin11_1.png</a>, <a href='./gourmand/oe/oe_s03_0.png'>oe_s03_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:54:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Shoreline, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_E02, SL_C07, OE_RUIN08, SI_A21</td>
-                        <td><a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a>, <a href='./gourmand/oe/oe_ruin08_1.png'>oe_ruin08_1.png</a>, <a href='./gourmand/si/si_a21_0.png'>si_a21_0.png</a></td>
+                        <td>Obtains food, discovers new skip ability</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'><img src='./gourmand/sl/sl_e02_2.png' alt='sl_e02_2.png'></td>
+                        <td><a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_c07_2.png'>sl_c07_2.png</a>, <a href='./gourmand/oe/oe_ruin08_1.png'>oe_ruin08_1.png</a>, <a href='./gourmand/si/si_a21_0.png'>si_a21_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>2:59:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/sl">sl</a></td>
-                        <td>Unknown, Shoreline</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/sl">sl</a></td>
+                        <td>Shoreline</td>
                         <td>SL_C15, SL_E02, SI_S04, SL_C05</td>
-                        <td><a href='./gourmand/sl/sl_c15_0.png'>sl_c15_0.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/si/si_s04_0.png'>si_s04_0.png</a>, <a href='./gourmand/sl/sl_c05_1.png'>sl_c05_1.png</a></td>
+                        <td>Obtain the Saint, return to jungle and explore further, new area discovered</td>
+                        <td class="preview"><img src='./gourmand/sl/sl_c15_0.png' alt='sl_c15_0.png'><img src='./gourmand/sl/sl_e02_0.png' alt='sl_e02_0.png'><img src='./gourmand/sl/sl_e02_4.png' alt='sl_e02_4.png'></td>
+                        <td><a href='./gourmand/sl/sl_c15_0.png'>sl_c15_0.png</a>, <a href='./gourmand/sl/sl_e02_0.png'>sl_e02_0.png</a>, <a href='./gourmand/sl/sl_e02_4.png'>sl_e02_4.png</a>, <a href='./gourmand/sl/sl_e02_2.png'>sl_e02_2.png</a>, <a href='./gourmand/sl/sl_e02_3.png'>sl_e02_3.png</a>, <a href='./gourmand/si/si_s04_0.png'>si_s04_0.png</a>, <a href='./gourmand/sl/sl_c05_1.png'>sl_c05_1.png</a></td>
                     </tr>
         
                     <tr>
                         <td>3:04:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
-                        <td>Outer Expanse, Sunken Pier, Unknown</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
+                        <td>Outer Expanse, Sunken Pier</td>
                         <td>SI_S05, OE_RUIN23, SL_ROOF01, OE_S04</td>
-                        <td><a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/oe/oe_ruin23_0.png'>oe_ruin23_0.png</a>, <a href='./gourmand/sl/sl_roof01_5.png'>sl_roof01_5.png</a>, <a href='./gourmand/sl/sl_roof01_3.png'>sl_roof01_3.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a></td>
+                        <td>Obtains food, finds new areas to explore, and has an idea for a future plan; also discusses a previous stream's events.</td>
+                        <td class="preview"><img src='./gourmand/si/si_s05_0.png' alt='si_s05_0.png'><img src='./gourmand/oe/oe_ruin23_0.png' alt='oe_ruin23_0.png'><img src='./gourmand/sl/sl_roof01_3.png' alt='sl_roof01_3.png'></td>
+                        <td><a href='./gourmand/si/si_s05_0.png'>si_s05_0.png</a>, <a href='./gourmand/oe/oe_ruin23_0.png'>oe_ruin23_0.png</a>, <a href='./gourmand/sl/sl_roof01_3.png'>sl_roof01_3.png</a>, <a href='./gourmand/sl/sl_roof01_5.png'>sl_roof01_5.png</a>, <a href='./gourmand/oe/oe_s04_0.png'>oe_s04_0.png</a></td>
                     </tr>
         
                     <tr>
                         <td>3:09:34</td>
-                        <td><a href="gourmand">gourmand</a></td>
-                        <td><a href="gourmand/oe">oe</a></td>
-                        <td>Unknown, Sunken Pier</td>
+                        <td><a href="gourmand">gourmand</a><br><a href="gourmand/oe">oe</a></td>
+                        <td>Sunken Pier</td>
                         <td>OE_RAIL02, OE_TOWER04, OE_TOWER05, OE_TOWER06</td>
+                        <td>Oliver obtains significant lore about Timothy's story, including the discovery of the pearl in the Subterranean fissure.</td>
+                        <td class="preview"><img src='./gourmand/oe/oe_rail02_2.png' alt='oe_rail02_2.png'><img src='./gourmand/oe/oe_tower04_1.png' alt='oe_tower04_1.png'><img src='./gourmand/oe/oe_tower04_2.png' alt='oe_tower04_2.png'></td>
                         <td><a href='./gourmand/oe/oe_rail02_2.png'>oe_rail02_2.png</a>, <a href='./gourmand/oe/oe_tower04_1.png'>oe_tower04_1.png</a>, <a href='./gourmand/oe/oe_tower04_2.png'>oe_tower04_2.png</a>, <a href='./gourmand/oe/oe_tower05_3.png'>oe_tower05_3.png</a>, <a href='./gourmand/oe/oe_tower06_1.png'>oe_tower06_1.png</a></td>
                     </tr>
         

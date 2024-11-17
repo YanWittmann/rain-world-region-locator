@@ -22,12 +22,13 @@ def format_timedelta(td):
 
 
 def extract_region_from_filename(filename):
-    # check if it starts with 'gate_XX_' and if so, ignore the prefix and only use what comes after
+    # Check if it starts with 'gate_XX_' and if so, ignore the prefix and only use what comes after
     if filename.startswith('gate_'):
         return filename.split('_')[2]
     return filename.split('_')[0]
 
-def summarize_locations(events, interval_minutes=5, subregion_limit=10):
+
+def summarize_locations(events, transcript_data=None, interval_minutes=5, subregion_limit=10):
     """Summarize player's predominant location and rooms for each interval."""
     summaries = []
     interval_seconds = interval_minutes * 60
@@ -44,10 +45,22 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
     filename_map = defaultdict(set)
     subregion_counts = {}
 
-    for event in events:
+    # Convert transcript data times to timedelta objects and keep track of used entries
+    if transcript_data and transcript_data['batches']:
+        for entry in transcript_data['batches']:
+            entry['start_td'] = timedelta(seconds=entry['start'])
+            entry['end_td'] = timedelta(seconds=entry['end'])
+        used_transcript_indices = set()
+
+    event_index = 0
+    total_events = len(events)
+
+    while event_index < total_events:
+        event = events[event_index]
         event_time = parse_timestamp(event['timestamp'])
+
         # Advance intervals if event_time is beyond the current end_time
-        while event_time >= end_time:
+        if event_time >= end_time:
             if area_counts:
                 # Determine predominant area, slugcat, and top rooms
                 predominant_area = max(area_counts, key=area_counts.get)
@@ -55,8 +68,8 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
                 top_rooms = sorted(room_counts.items(), key=lambda x: x[1], reverse=True)[:4]
                 top_room_names = [room for room, count in top_rooms]
                 top_filenames = [
-                    {'name': filename, 'path': f"./{predominant_slugcat}/{extract_region_from_filename(filename)}/{filename}"}
-                    # get the area from the filename of format "oe_s04_0.png", "sl_b04_2.png" --> "oe", "sl"
+                    {'name': filename,
+                     'path': f"./{predominant_slugcat}/{extract_region_from_filename(filename)}/{filename}"}
                     for room in top_room_names
                     for filename in filename_map[room]
                 ]
@@ -67,6 +80,22 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
                 )[:subregion_limit]
                 top_subregion_names = [subregion if subregion else 'none' for subregion, count in top_subregions]
                 top_subregion_names = [subregion for subregion in top_subregion_names if subregion != 'none']
+
+                # Find applicable transcript summaries
+                transcript_summaries = []
+                if transcript_data and transcript_data['batches']:
+                    interval_start = start_time
+                    interval_end = end_time
+                    for idx, transcript_entry in enumerate(transcript_data['batches']):
+                        if idx in used_transcript_indices:
+                            continue
+                        # Check if transcript overlaps with the interval
+                        if (transcript_entry['start_td'] < interval_end) and (
+                                transcript_entry['end_td'] > interval_start):
+                            transcript_summaries.append(transcript_entry['summary'])
+                            used_transcript_indices.add(idx)
+                            break  # Use each transcript entry only once
+
                 summaries.append({
                     'start_time': format_timedelta(start_time),
                     'end_time': format_timedelta(end_time),
@@ -74,8 +103,10 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
                     'region': predominant_area,
                     'rooms': ', '.join(top_room_names),
                     'filenames': top_filenames,
-                    'subregions': ', '.join(top_subregion_names)
+                    'subregions': ', '.join(top_subregion_names),
+                    'transcript': ' '.join(transcript_summaries) if transcript_summaries else ''
                 })
+            # Reset for next interval
             start_time = end_time
             end_time = start_time + timedelta(seconds=interval_seconds)
             area_counts = {}
@@ -83,7 +114,9 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
             slugcat_counts = {}
             filename_map = defaultdict(set)
             subregion_counts = {}
+            continue  # Re-evaluate the same event for the new interval
 
+        # Aggregate counts
         area = event['region']
         area_counts[area] = area_counts.get(area, 0) + 1
 
@@ -99,13 +132,15 @@ def summarize_locations(events, interval_minutes=5, subregion_limit=10):
         subregion = event.get('room_metadata', {}).get('subregion')
         subregion_counts[subregion] = subregion_counts.get(subregion, 0) + 1
 
+        event_index += 1
+
     return summaries
 
 
-def generate_markdown(summaries, video_file, output_file):
+def generate_markdown(summaries, video_file, output_file, transcript_data=None):
     """Generate a markdown file summarizing the player's location data."""
     with open(output_file, 'w') as f:
-        f.write("# Location summary\n\n")
+        f.write("# Rain World Gameplay Summary\n\n")
         f.write(f"The dataset `{video_file}` contains footage of the following locations:\n\n")
 
         # Collect all unique slugcat/region pairs
@@ -119,11 +154,15 @@ def generate_markdown(summaries, video_file, output_file):
         for location in sorted(locations):
             f.write(f"- {location}\n")
 
+        if transcript_data and transcript_data['full']:
+            f.write("\n## Transcript Summary\n\n")
+            f.write(transcript_data['full'])
+
         f.write("\n## Details\n\n")
         f.write(
-            "| Time              | Slugcat              | Region            | Subregion   | Most frequent rooms                     | Rooms       |\n")
+            "| Time              | Slugcat              | Region            | Subregion   | Most frequent rooms                     | Transcript Summary | Rooms       |\n")
         f.write(
-            "|-------------------|----------------------|-------------------|-------------|-----------------------------------------|-------------------|\n")
+            "|-------------------|----------------------|-------------------|-------------|-----------------------------------------|--------------------|-------------------|\n")
 
         for summary in summaries:
             md_filenames = ', '.join(
@@ -134,12 +173,13 @@ def generate_markdown(summaries, video_file, output_file):
             f.write(f"| [{summary['region']}]({summary['slugcat']}/{summary['region']}) ")
             f.write(f"| {summary['subregions']} ")
             f.write(f"| {summary['rooms']} ")
+            f.write(f"| {summary['transcript']} ")
             f.write(f"| {md_filenames} |\n")
 
         print(f"Markdown file saved to {output_file}")
 
 
-def generate_html(summaries, video_file, output_file):
+def generate_html(summaries, video_file, output_file, transcript_data=None):
     """Generate an HTML file summarizing the player's location data."""
     html_content = f"""
     <!DOCTYPE html>
@@ -147,7 +187,7 @@ def generate_html(summaries, video_file, output_file):
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Location Summary</title>
+        <title>Gameplay Summary</title>
         <style>
             body {{
                 font-family: Arial, sans-serif;
@@ -222,10 +262,11 @@ def generate_html(summaries, video_file, output_file):
     </head>
     <body>
         <div class="container">
-            <h1>Location Summary</h1>
+            <h1>Rain World Gameplay Summary</h1>
             <p>The dataset <strong>{video_file}</strong> contains footage of the following locations:</p>
             <ul>
     """
+
     # Collect all unique slugcat/region pairs
     locations = set()
     for summary in summaries:
@@ -234,17 +275,25 @@ def generate_html(summaries, video_file, output_file):
         if slugcat and region:
             locations.add(f"<li><a href='{slugcat}/{region}'>{slugcat}/{region}</a></li>")
     html_content += "\n".join(sorted(locations))
-    html_content += """
-            </ul>
+    html_content += "</ul>"
+
+    is_any_transcript = any(summary['transcript'] for summary in summaries)
+    if transcript_data and transcript_data['full']:
+        html_content += f"""
+            <h2>Transcript Summary</h2>
+            <p>{transcript_data['full']}</p>
+        """
+
+    html_content += f"""
             <h2>Details</h2>
             <table>
                 <thead>
                     <tr>
                         <th>Time</th>
-                        <th>Slugcat</th>
                         <th>Region</th>
                         <th>Subregion</th>
                         <th>Most Frequent Rooms</th>
+                        {'<th>Transcript Summary</th>' if is_any_transcript else ''}
                         <th>Preview <button style="margin-left:5px" onclick="togglePreviewSize()">Resize</button></th>
                         <th>Rooms</th>
                     </tr>
@@ -261,10 +310,10 @@ def generate_html(summaries, video_file, output_file):
         html_content += f"""
                     <tr>
                         <td>{summary['start_time']}</td>
-                        <td><a href="{summary['slugcat']}">{summary['slugcat']}</a></td>
-                        <td><a href="{summary['slugcat']}/{summary['region']}">{summary['region']}</a></td>
+                        <td><a href="{summary['slugcat']}">{summary['slugcat']}</a><br><a href="{summary['slugcat']}/{summary['region']}">{summary['region']}</a></td>
                         <td>{summary['subregions']}</td>
                         <td>{summary['rooms']}</td>
+                        {'<td>' + summary['transcript'] + '</td>' if is_any_transcript else ''}
                         <td class="preview">{preview_images}</td>
                         <td>{html_filenames}</td>
                     </tr>
@@ -290,11 +339,12 @@ def main():
     parser.add_argument('-i', '--interval', type=int, default=5, help='Interval duration in minutes.')
     parser.add_argument('-s', '--subregion_limit', type=int, default=10,
                         help='Maximum number of subregions to include.')
+    parser.add_argument('-t', '--transcript_file', help='Path to the transcript JSON file.')
     args = parser.parse_args()
 
     if args.output_file == '<json_filename>':
         args.output_file = os.path.splitext(args.json_file)[0] + ('.md' if args.format == 'md' else '.html')
-    # append correct filename if not provided
+    # Append correct filename if not provided
     if (not args.output_file.endswith('.md') and args.format == 'md') or (
             not args.output_file.endswith('.html') and args.format == 'html'):
         args.output_file += '.md' if args.format == 'md' else '.html'
@@ -302,12 +352,24 @@ def main():
     with open(args.json_file, 'r') as f:
         events = json.load(f)
 
-    summaries = summarize_locations(events, interval_minutes=args.interval, subregion_limit=args.subregion_limit)
+    # Load transcript data if provided
+    if args.transcript_file:
+        with open(args.transcript_file, 'r') as f:
+            transcript_data = json.load(f)
+    else:
+        transcript_data = None
+
+    summaries = summarize_locations(
+        events,
+        transcript_data=transcript_data,
+        interval_minutes=args.interval,
+        subregion_limit=args.subregion_limit
+    )
 
     if args.format == 'md':
-        generate_markdown(summaries, os.path.splitext(args.json_file)[0], args.output_file)
+        generate_markdown(summaries, os.path.splitext(args.json_file)[0], args.output_file, transcript_data)
     else:
-        generate_html(summaries, os.path.splitext(args.json_file)[0], args.output_file)
+        generate_html(summaries, os.path.splitext(args.json_file)[0], args.output_file, transcript_data)
 
 
 if __name__ == '__main__':
