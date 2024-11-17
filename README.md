@@ -20,6 +20,10 @@ Examples for the output:
 
 ![html table demo](doc/html-table-demo.png)
 
+Run [identify_server.py](identify_server.py) to start a webpage that allows you to identify rooms from screenshots.
+
+![locate single room](locate-single-room.png)
+
 ## How to run this project
 
 ### Setup
@@ -325,5 +329,5 @@ python interpret_overview_table.py "<path_to_json>" --format html --output_file 
 ```
 
 ```bash
-python complete.py "I:\video-projects\oliver-rain-world\raw\Gourmand - Rain World Blind #32 [WOU3KgRc13g]-converted.mp4" --start_time 1140 --search_filter "gourmand/oe,gourmand/sl" --transcript_file "I:\projects\rain-world-region-locator\data\Gourmand - Rain World Blind #32.csv"
+python complete.py "I:\video-projects\oliver-rain-world\raw\Gourmand - Rain World Blind #32 [WOU3KgRc13g]-converted.mp4" --start_time 1140 --search_filter "gourmand/oe,gourmand/sl" --transcript_file "I:\projects\rain-world-region-locator\data\Gourmand - Rain World Blind #32.csv" --model llama3.2
 ```
